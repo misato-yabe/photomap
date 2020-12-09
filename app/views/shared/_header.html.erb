@@ -1,0 +1,38 @@
+
+<!--PC用（901px以上端末）メニュー-->
+<nav id="main-menubar">
+  <ul>
+    <li><%= link_to 'My Page', "photos#index", class: "mypage" %> </li>
+    <li><%= link_to 'Post', "#", class: "post" %> </li>
+    <li><%= link_to 'Serch', "#", class: "serch" %> </li>
+    <li><%= link_to 'Show Page', "#", class: "show page" %> </li>
+  </ul>
+  <ul class="icon">
+    <li><%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %> </li>
+    <li><%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %> </li>
+    <li><%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %> </li>
+    <li><%= link_to image_tag("icon_youtube.png", class:"icon"),"/" %> </li>
+  </ul>
+</nav>
+<!--小さい端末用（900px以下端末）メニュー-->
+<nav id="main-menubar-s">
+  <ul>
+    <li><a href="company.html">Company</a></li>
+    <li id="main-menubar_hdr2" class="close">Service
+      <ul id="main-menubar-s2">
+        <li><a href="service.html">サービスメニュー</a></li>
+        <li><a href="service.html">サービスメニュー</a></li>
+        <li><a href="service.html">サービスメニュー</a></li>
+      </ul>
+    </li>
+  <li><a href="recruit.html">Recruit</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <ul class="icon">
+    <li><%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %> </li>
+    <li><%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %> </li>
+    <li><%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %> </li>
+    <li><%= link_to image_tag("icon_youtube.png", class:"icon"),"/" %> </li>
+  </ul>
+</nav>
+

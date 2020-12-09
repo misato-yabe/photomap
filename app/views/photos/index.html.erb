@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<div class='main-gallery'>
+  <ul class="photos-lists">
+    <li class="photo-list">
+    <%= link_to root_path do %>
+      <div class="photo-content">
+      <%= image_tag ("sample1.jpg"), class: "photo-img" %>
+        <div class='star-btn'>
+          <%= image_tag "star.png",class:"icon"%>
+          <span class='star-count'>0</span>
+        </div>
+      </div>
+    <% end %>
+    </li>
+  </ul>
+</div>
+
+<%= render "shared/footer" %>
+
+<!--ページの上部に戻る「↑」ボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
