@@ -2,10 +2,14 @@
   <h1 class="logo"><%= link_to image_tag("logo.png", class:"top-image"), "/" %></h1>
   <nav id="menubar">
     <ul>
+      <% if user_signed_in? %>
       <li><%= link_to 'My Page', "photos#index", class: "mypage" %> </li>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout"%> </li>
       <li><%= link_to 'Post', "#", class: "post" %> </li>
-      <li><%= link_to 'Serch', "#", class: "serch" %> </li>
-      <li><%= link_to 'Show Page', "#", class: "show page" %> </li>
+    <% else %>
+      <li><%= link_to 'Signin',new_user_registration_path, class: "Signin" %> </li>
+      <li><%= link_to 'Login', new_user_session_path , method: :post, class: "Login" %> </li>
+    <% end %>
     </ul>
   </nav>
 </div>

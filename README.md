@@ -10,7 +10,6 @@
 | first_name         | string  | null: false               |
 | last_name_kana     | string  | null: false               |
 | first_name_kana    | string  | null: false               |
-| phone_number       | integer | null: false ,unique: true |
 | birth_day          | integer | null: false               |
 | encrypted_password | string  | null: false ,unique: true |
 
