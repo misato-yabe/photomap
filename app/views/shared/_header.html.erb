@@ -2,43 +2,26 @@
 <!--PC用（901px以上端末）メニュー-->
 <nav id="main-menubar">
   <ul>
+    <li class='list'>
     <% if user_signed_in? %>
-      <li><%= link_to 'My Page', "photos#index", class: "mypage" %> </li>
-      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout"%> </li>
-      <li><%= link_to 'Post', "#", class: "post" %> </li>
+      <%= link_to 'My Page', "photos#index", class: "mypage" %>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout" %>
+      <%= link_to 'Post', "#", class: "post" %>
     <% else %>
-      <li><%= link_to 'Signin',new_user_registration_path, class: "Signin" %> </li>
-      <li><%= link_to 'Login', new_user_session_path , method: :post, class: "Login" %> </li>
+      <%= link_to 'Signin',new_user_registration_path, class: "Sign" %>
+      <%= link_to 'Login', new_user_session_path , method: :post, class: "Login" %>
     <% end %>
-
-      <li><%= link_to 'Serch', "#", class: "serch" %> </li>
-  </ul>
-  <ul class="icon">
-    <li><%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %> </li>
-    <li><%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %> </li>
-    <li><%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %> </li>
-    <li><%= link_to image_tag("icon_youtube.png", class:"icon"),"/" %> </li>
-  </ul>
-</nav>
-<!--小さい端末用（900px以下端末）メニュー-->
-<nav id="main-menubar-s">
-  <ul>
-    <li><a href="company.html">Company</a></li>
-    <li id="main-menubar_hdr2" class="close">Service
-      <ul id="main-menubar-s2">
-        <li><a href="service.html">サービスメニュー</a></li>
-        <li><a href="service.html">サービスメニュー</a></li>
-        <li><a href="service.html">サービスメニュー</a></li>
-      </ul>
+      <%= link_to 'Serch', "#", class: "serch" %>
     </li>
-  <li><a href="recruit.html">Recruit</a></li>
-  <li><a href="contact.html">Contact</a></li>
   </ul>
   <ul class="icon">
-    <li><%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %> </li>
-    <li><%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %> </li>
-    <li><%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %> </li>
-    <li><%= link_to image_tag("icon_youtube.png", class:"icon"),"/" %> </li>
+    <li class='list'>
+    <%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %>
+    <%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %>
+    <%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %>
+    <%= link_to image_tag("icon_youtube.png", class:"icon"),"/" %>
+    </li>
   </ul>
 </nav>
+
 

@@ -3,7 +3,7 @@
   <nav id="menubar">
     <ul>
       <% if user_signed_in? %>
-      <li><%= link_to 'My Page', "photos#index", class: "mypage" %> </li>
+      <li><%= link_to 'My Page', photos_path, class: "mypage" %> </li>
       <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout"%> </li>
       <li><%= link_to 'Post', "#", class: "post" %> </li>
     <% else %>
