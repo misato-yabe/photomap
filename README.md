@@ -15,9 +15,9 @@
 
 ### Association
 
-- has_many :images
+- has_many :photos
 
-## images テーブル
+## photos テーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
@@ -46,4 +46,4 @@
 
 ### Association
 
-- has_many :images
+- has_many :photos

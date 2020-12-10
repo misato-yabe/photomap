@@ -1,13 +1,11 @@
-<%= render "shared/header" %>
-
-<%# 投稿写真一覧 %>
 <div class='main-gallery'>
 <h2 class='title'>Pick Up Photos</h2>
+
   <ul class="photos-lists">
   <% if @photos != nil %>
     <% @photos.each do |photo| %>
     <li class='list'>
-      <%= link_to "#photoの詳細ページ" %>
+      <%= link_to "#photoの詳細ページ" do %>
       <div class='photo-img-content'>
         <%= image_tag photo.image, class: 'photo-img' %>
         <div class='star-btn'>
@@ -15,6 +13,7 @@
           <span class='star-count'>0</span>
         </div>
       </div>
+      <% end %>
     </li>
     <% end %>
   <% else %>
@@ -33,10 +32,3 @@
   <% end %>
   </ul>
 </div>
-<%# 投稿写真一覧 %>
-
-<%= render "shared/footer" %>
-
-<!--ページの上部に戻る「↑」ボタン-->
-<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
-
