@@ -6,9 +6,9 @@
     <% if user_signed_in? %>
       <%= link_to 'My Page', user_path(current_user.id), class: "mypage" %>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout" %>
-      <%= link_to 'Post', "#", class: "post" %>
+      <%= link_to 'Post', new_photo_path, class: "post" %>
     <% else %>
-      <%= link_to 'Signin',new_user_registration_path, class: "Sign" %>
+      <%= link_to 'Signin',new_user_registration_path, class: "Signin" %>
       <%= link_to 'Login', new_user_session_path , method: :post, class: "Login" %>
     <% end %>
       <%= link_to 'Serch', "#", class: "serch" %>
@@ -23,5 +23,3 @@
     </li>
   </ul>
 </nav>
-
-

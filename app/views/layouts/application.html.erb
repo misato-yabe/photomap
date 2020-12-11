@@ -6,6 +6,8 @@
     <title>PHOTO MAP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="全国のお気に入り写真を探すアプリ「PHOTO MAP」。直感的な操作がポイントです。">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%# <script src="js/fixmenu_pagetop.js"></script> %>
@@ -26,7 +28,6 @@
     });
     });
     </script>
-    <%= csrf_meta_tags %>
   </head>
 
   <body>
