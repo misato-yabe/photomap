@@ -10,26 +10,25 @@
 | first_name         | string  | null: false               |
 | last_name_kana     | string  | null: false               |
 | first_name_kana    | string  | null: false               |
-| phone_number       | integer | null: false ,unique: true |
 | birth_day          | integer | null: false               |
 | encrypted_password | string  | null: false ,unique: true |
 
 ### Association
 
-- has_many :images
+- has_many :photos
 
-## images テーブル
+## photos テーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | title         | string     | null: false                    |
-| area_id       | integer    | null: false                    |
+| prefecture_id | integer    | null: false                    |
 | situation_id  | integer    | null: false                    |
 | weather_id    | integer    | null: false                    |
-| date_id       | integer    | null: false                    |
+| month_id      | integer    | null: false                    |
 | camera_id     | integer    | null: false                    |
 | lens_id       | integer    | null: false                    |
-| comment       | string     |                                |
+| comment       | text       |                                |
 | user          | references | null: false, foreign_key: true |
 
 ### Association
@@ -47,4 +46,4 @@
 
 ### Association
 
-- has_many :images
+- has_many :photos
