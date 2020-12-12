@@ -13,14 +13,14 @@ class Photo < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :image
-    validates :situation_id,numericality: { other_than: (1,2,10,15), message: 'Select' }
+  end
 
-    with_options numericality: { other_than: 1, message: 'Select' } do
-      validates :prefecture_id
-      validates :weather_id
-      validates :month_id
-      validates :camera_id
-      validates :lens_id
-    end
+  with_options numericality: { other_than: 1, message: "%{value} の選択は無効です" } do
+    validates :prefecture_id
+    validates :situation_id
+    validates :weather_id
+    validates :month_id
+    validates :camera_id
+    validates :lens_id
   end
 end
