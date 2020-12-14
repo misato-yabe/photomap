@@ -1,29 +1,60 @@
 <%= render "shared/header" %>
-
 <%# 投稿写真一覧 %>
-<div class='main-gallery'>
-<h2 class='title'>Pick Up Photos</h2>
-  <ul class="photos-lists">
-  <% if @photos != nil %>
-    <% @photos.each do |photo| %>
-    <li class='list'>
-      <%= link_to "#photoの詳細ページ" %>
-      <div class='photo-img-content'>
-        <%= image_tag photo.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0"}), class: 'photo-img' %>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
+
+<div class='main'>
+  <p>Pick Up Photos</p>
+    <ul class="photos-lists">
+    <% if @photos != nil %>
+      <% @photos.each do |photo| %>
+      <li class='photo-content'>
+        <%= link_to "#" do %>
+          <div class='photo-img-content'>
+          <%= image_tag photo.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0" }), class: 'photo-img'%>
+        <% end %>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
         </div>
+      </li>
+      <% end %>
+    <% else %>
+      <li class='photo-content'>
+      <%= image_tag "sample1.jpg", class: "photo-img" %>
+      <div class='star-btn'>
+        <%= image_tag "star.png", class:"star-icon" %>
+        <span class='star-count'>0</span>
       </div>
     </li>
-    <% end %>
-  <% else %>
-    <li class='list'>
-      <%= image_tag "sample1.jpg", class: "photo-img" %>
+    <li class='photo-content'>
       <%= image_tag "sample2.jpg", class: "photo-img" %>
+      <div class='star-btn'>
+        <%= image_tag "star.png", class:"star-icon" %>
+        <span class='star-count'>0</span>
+      </div>
+    </li>
+    <li class='photo-content'>
       <%= image_tag "sample3.jpg", class: "photo-img" %>
+      <div class='star-btn'>
+        <%= image_tag "star.png", class:"star-icon" %>
+        <span class='star-count'>0</span>
+      </div>
+    </li>
+    <li class='photo-content'>
       <%= image_tag "sample4.jpg", class: "photo-img" %>
+      <div class='star-btn'>
+        <%= image_tag "star.png", class:"star-icon" %>
+        <span class='star-count'>0</span>
+      </div>
+    </li>
+    <li class='photo-content'>
       <%= image_tag "sample5.jpg", class: "photo-img" %>
+      <div class='star-btn'>
+        <%= image_tag "star.png", class:"star-icon" %>
+        <span class='star-count'>0</span>
+      </div>
+    </li>
+    <li class='photo-content'>
       <%= image_tag "sample6.jpg", class: "photo-img" %>
       <div class='star-btn'>
         <%= image_tag "star.png", class:"star-icon" %>

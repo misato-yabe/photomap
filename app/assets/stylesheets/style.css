@@ -43,18 +43,17 @@ a:hover {
 
 /*ヘッダー（一番上の、ロゴやメニューが入っているブロック）
 ---------------------------------------------------------------------------*/
-header {
-  height: 100%;
-  width: 100%;
-	overflow: auto;
-	position: relative;
-	position: fixed;
+
+/*トップページ*/
+header{
+	display: flex;
+	height: 50px;
 }
 
 .top-header{
   height: 100%;
   width: 100%;
-  background: linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.7) 0%, rgba(35, 36, 36, 0.7) 100%),
   url(top.png);
 	background-size: cover;
 	position: relative;
@@ -68,14 +67,41 @@ header {
 	height: auto;
 }
 
-/*ロゴ画像*/
-header #logo img {
-	display: block;
-	width: 20%;	/*画像の幅*/
-	position: absolute;
-	left: 40%;		/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
-	bottom: 50%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+/*メインページ*/
+
+#main-menubar {
+	float: left;
+	height: 50px;
+	width: 100vw;
+	position: fixed;
+	background-color: #000;
+	border-bottom: 1px solid rgba(255,255,255,0.4);
 }
+
+#main-menubar li {
+  float: left;
+  letter-spacing: 0.1em;
+}
+
+.list-menu {
+	display: flex;
+	margin: 0 1%;
+	animation-name: opa1;
+	animation-delay: 1S;
+	animation-duration: 1S;
+	animation-fill-mode: both;
+
+}
+
+.list-icon {
+	display: flex;
+	margin: 0 1%;
+	animation-name: opa1;
+	animation-delay: 1S;
+	animation-duration: 1S;
+	animation-fill-mode: both;
+}
+
 
 /*トップメニュー
 ---------------------------------------------------------------------------*/
@@ -114,19 +140,7 @@ header #logo img {
 ---------------------------------------------------------------------------*/
 
 /*メイン　メニューブロック全体への指定*/
-#main-menubar {
-	float: left;
-	height: 50px;
-	width: 100vw;
-	position: fixed;
-	background-color: #000;
-}
 
-/*メニュー１個あたりの指定*/
-#main-menubar li {
-  float: left;
-  letter-spacing: 0.1em;
-}
 #main-menubar li a, .ddmenu-title {
   display: block;text-decoration: none;
   color: #fff;	/*文字色*/
@@ -137,45 +151,12 @@ header #logo img {
 #main-menubar li a:hover {
   background: #686a6d !important;
 }
-/*ドロップダウンメニューの親メニューへの追加指定。基本指定は上の.ddmenu-titleにあります。*/
-.ddmenu-title {
-  padding-left: 40px;	/*アイコン分の余白を確保*/
-  background: url(../images/arrow1.png) no-repeat 10px center / auto 25px;	/*アイコン画像の読み込み。最後の25pxは高さ指定。*/
-}
 
 /*小さい端末用メニューを非表示にする*/
 #main-menubar-s,#main-menubar-s2 {display: none;}
 /*３本バーアイコンを表示させない*/
 #main-menubar_hdr {display: none;}
 
-/*ドロップダウンメニュー（ddmenu）
----------------------------------------------------------------------------*/
-/*メニューブロック全体*/
-#main-menubar ul.ddmenu {
-  position:absolute;visibility: hidden;z-index: 10;
-  width: auto;
-  margin-left: -40px;	/*.ddmenu-titleのpadding-leftと数字を合わせてマイナス記号をつける。*/
-}
-/*メニュー１個あたりの指定*/
-#main-menubar ul.ddmenu li {
-  float: none;
-}
-#main-menubar ul.ddmenu li a {
-  background: #000;	/*背景色（古いブラウザ用）*/
-  background: rgba(0,0,0,0.8);	/*背景色。0,0,0は黒の事で0.8は色が80%出た状態。*/
-  border: 1px solid rgba(255,255,255,0.4);	/*線の幅、線種、色。255,255,255は白の事で0.4は色が40%出た状態。*/
-  border-top: none;	/*上の線だけ消す*/
-}
-/*１つ目のメニューへの追加指定*/
-#main-menubar ul.ddmenu li:first-child a {
-  border-top: 1px solid rgba(255,255,255,0.4);	/*上の線の指定*/
-}
-/*ドロップダウンのマウスオン事*/
-li:hover ul.ddmenu {
-  animation-name: opa1;	/*keyframes.cssで使う@keyframesの指定*/
-  animation-duration: 0.4S;	/*アニメーションの実行時間。0.4秒。*/
-  animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
-}
 
 /*facebookやtwitterなどのアイコン
 ---------------------------------------------------------------------------*/
@@ -183,10 +164,6 @@ li:hover ul.ddmenu {
 ul.icon {
   float: right;	/*アイコンブロックを右に回り込み*/
   margin-right: 20px;	/*右側に空けるスペース*/
-}
-/*アイコン１個あたりの設定*/
-ul.icon li {
-  display: inline-block;	/*横並びにさせる指定*/
 }
 
 /*アイコン画像の設定*/
@@ -242,62 +219,35 @@ ul.icon img {
 	margin-top: -10px;
 }
 
-/*Serviceページ
----------------------------------------------------------------------------*/
-/*各ブロックごとの設定*/
-.list {
-	overflow: hidden;
-	line-height: 1.5;
-	border-bottom: 1px solid #999;	/*下線の幅、線種、色*/
-	padding: 20px;	/*ボックス内の余白*/
-}
-/*１番目のlistブロックへの追加指定。上に線を入れる。*/
-.list:first-of-type {
-	border-top: 1px solid #999;
-}
-/*h4見出しの設定*/
-.list h4 {
-	font-size: 20px;	/*文字サイズ*/
-	margin-bottom: 10px;
-}
-/*画像の設定*/
-.list img {
-	width: 20%;			/*画像幅*/
-	float: left;		/*画像を左に回り込み*/
-	margin-right: 3%	/*画像の右側に空けるスペース*/
-}
-/*段落タグ*/
-.list p {
-	padding: 0 !important;
-}
-
 /*フッター設定
 ---------------------------------------------------------------------------*/
-footer {
-	clear: both;
-	text-align: center;
-	background: #222;	/*背景色*/
-	color: #fff;		/*文字色*/
-	font-size: 85%;		/*文字サイズ*/
-}
-footer a {
-	color: #fff;	/*リンクテキストの文字色*/
-	text-decoration: none;
-}
-footer a:hover {
-	color: #fff;	/*マウスオン時の文字色*/
-}
-footer .pr {
-	display: block;
-	font-size: 80%;
+
+.wrapper-footer{
+	min-height: 50vh;
+	padding-bottom: 120px;
 }
 
+footer {
+	height: 50px;
+	clear: both;
+	font-size: 85%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+footer p {
+	color: #fff;	/*リンクテキストの文字色*/
+	text-decoration: none;
+
+}
 
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
 body .nav-fix-pos-pagetop a {
 	display: none;
-	
 }
 body.is-fixed-pagetop .nav-fix-pos-pagetop a {
 	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
@@ -428,60 +378,51 @@ ol {
 /*メインギャラリー
 ---------------------------------------------------------------------------*/
 
-.main-gallery{
+.main{
 	width: 100%;
-	height: 100%;
-	margin-top: 0px;
-	margin-bottom: 50px;
+	min-height: calc(100vh - 100px);
+	padding-bottom: 30px;
 }
+
+.main p{
+	height: 50px;
+	color: #fff;
+	margin: 10px 50px;
+	font-size: 20px;
+}
+
 .photos-lists {
 width: 100vw;
-padding: 50px , 10px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 }
 
-.photo-list >li {
-	width: 37vh;
-	height: 37vw;
-	padding: 1vw;
-	}
-
 .photo-content{
-	width: 426px;
-	height: 428px;
+	width: 350px;
+	height: 400px;
+	padding: 7px 7px 10px 7px;
+
 }
 
 .photo-img {
-	width: 426px;
-	height: 428px;
+	width: 350px;
+	height: 350px;
 }
 
 .star-btn {
-	width: 20px;
 	height: 20px;
 	margin: 5px;
 	display: flex;
 }
 
+.star-icon{
+	width: 20px;
+	display: block;
+}
 .star-count {
 	width: 20px;
 	height: 20px;
 	margin: 5px,5px,10px,5px;
+	display: block;
 }
-
-/* .item-img-content {
-position: relative;
-}
-
-.item-img {
-width: 33vh;
-height: 33vh;
-} */
-
-/* #gallery-lists img{
-	width: 426px;
-	height: 428px;
-} */
-
