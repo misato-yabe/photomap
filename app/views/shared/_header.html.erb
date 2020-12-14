@@ -1,25 +1,29 @@
-
+<!--ヘッダー-->
+<header>
 <!--PC用（901px以上端末）メニュー-->
-<nav id="main-menubar">
-  <ul>
-    <li class='list'>
-    <% if user_signed_in? %>
-      <%= link_to 'My Page', user_path(current_user.id), class: "mypage" %>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout" %>
-      <%= link_to 'Post', new_photo_path, class: "post" %>
-    <% else %>
-      <%= link_to 'Signin',new_user_registration_path, class: "Signin" %>
-      <%= link_to 'Login', new_user_session_path , method: :post, class: "Login" %>
-    <% end %>
-      <%= link_to 'Serch', "#", class: "serch" %>
-    </li>
-  </ul>
-  <ul class="icon">
-    <li class='list'>
-    <%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %>
-    <%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %>
-    <%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %>
-    <%= link_to image_tag("icon_youtube.png", class:"icon"),"/" %>
-    </li>
-  </ul>
-</nav>
+  <%# <nav id="main-menubar"> %>
+  <nav id="main-menubar">
+    <ul class="menu">
+      <li class='list-menu'>
+        <%= link_to 'Serch', photos_path, class: "serch" %>
+      <% if user_signed_in? %>
+        <%= link_to 'My Page', user_path(current_user.id), class: "mypage" %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout" %>
+        <%= link_to 'Post', new_photo_path, class: "post" %>
+      <% else %>
+        <%= link_to 'Signin',new_user_registration_path, class: "Signin" %>
+        <%= link_to 'Login', new_user_session_path , method: :post, class: "Login" %>
+      <% end %>
+      </li>
+    </ul>
+    <ul class="icon">
+      <li class='list-icon'>
+        <%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %>
+        <%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %>
+        <%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %>
+        <%= link_to image_tag("icon_youtube.png", class:"icon"),"/" %>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!--ヘッダー-->
