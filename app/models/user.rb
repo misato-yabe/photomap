@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :images
+  has_many :photos
 
   with_options presence: true do
     with_options uniqueness: true do
