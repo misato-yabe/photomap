@@ -9,7 +9,9 @@
     <div class="photo-field">
       <div class="photo">
       <h3>写真を投稿する</h3>
-      <%= f.file_field :image, id:"photo-image" %>
+        <%= f.file_field :image, id:"photo-image" %>
+        <div id="image-list"></div>
+        <%= image_tag @photo.image, id: 'image' if @photo.image.present? %>
       </div>
     </div>
   </div>
