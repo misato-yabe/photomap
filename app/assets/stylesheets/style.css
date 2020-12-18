@@ -65,6 +65,8 @@ header{
 .top-image {
 	width: 300px;
 	height: auto;
+	position: absolute;
+	top: 33%;
 }
 
 /*メインページ*/
@@ -108,7 +110,7 @@ header{
 /*トップ　メニューブロック全体への指定*/
 #menubar {
 	position: absolute;
-	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	bottom: 30%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 	left: 0px;
 	width: 100%;
 	text-align: center;
@@ -140,6 +142,11 @@ header{
 ---------------------------------------------------------------------------*/
 
 /*メイン　メニューブロック全体への指定*/
+
+.menubar-list {
+	display: flex;
+	justify-content: center;
+}
 
 #main-menubar li a, .ddmenu-title {
   display: block;text-decoration: none;
