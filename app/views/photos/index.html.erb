@@ -7,14 +7,16 @@
     <% if @photos != nil %>
       <% @photos.each do |photo| %>
       <li class='photo-content'>
-        <%= link_to "#" do %>
-          <div class='photo-img-content'>
-          <%= image_tag photo.image.variant(combine_options:{gravity: :center, resize:"640x640^", crop:"640x640+0+0" }), class: 'photo-img'%>
-        <% end %>
-          <div class='star-btn'>
-            <%= image_tag "star.png", class:"star-icon" %>
-            <span class='star-count'>0</span>
-          </div>
+        <div class="photo-img-content">
+          <% photo.images.each do |image| %>
+            <%= link_to "#" do %>
+            <%= image_tag image, class: 'photo-img'%>
+            <% end %>
+          <% end %>
+        </div>
+        <div class='star-btn'>
+          <%= image_tag "star.png", class:"star-icon" %>
+          <span class='star-count'>0</span>
         </div>
       </li>
       <% end %>

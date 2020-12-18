@@ -408,7 +408,11 @@ justify-content: center;
 	width: 350px;
 	height: 400px;
 	padding: 7px 7px 10px 7px;
+}
 
+.photo-img-content{
+	width: 350px;
+	height: 350px;
 }
 
 .photo-img {
