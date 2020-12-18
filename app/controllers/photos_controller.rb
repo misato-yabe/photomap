@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!,only:[:new]
+
   def index
     @photos = Photo.all.order("created_at DESC")
   end
@@ -13,7 +14,6 @@ class PhotosController < ApplicationController
     if @photo.save
       redirect_to user_path(current_user.id)
     else
-      @photos = @photo.user_id
       render :new
     end
   end
@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
 
   def photo_params
     params.require(:photo)
-    .permit(:image,:title,:comment,:prefecture_id,:situation_id,:weather_id,:month_id,:camera_id,:lens_id)
+    .permit(:title,:comment,:prefecture_id,:situation_id,:weather_id,:month_id,:camera_id,:lens_id, images: [])
     .merge(user_id: current_user.id)
   end
 end

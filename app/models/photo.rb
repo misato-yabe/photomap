@@ -8,11 +8,11 @@ class Photo < ApplicationRecord
   belongs_to_active_hash :len
   belongs_to :user
   # belongs_to :area
-  has_one_attached :image
+  has_many_attached :images
 
   with_options presence: true do
     validates :title
-    validates :image
+    validates :images
   end
 
   with_options numericality: { other_than: 1, message: "%{value} の選択は無効です" } do
