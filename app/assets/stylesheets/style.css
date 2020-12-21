@@ -65,6 +65,8 @@ header{
 .top-image {
 	width: 300px;
 	height: auto;
+	position: absolute;
+	top: 33%;
 }
 
 /*メインページ*/
@@ -74,6 +76,8 @@ header{
 	height: 50px;
 	width: 100vw;
 	position: fixed;
+	top: 0;
+	z-index: 99;
 	background-color: #000;
 	border-bottom: 1px solid rgba(255,255,255,0.4);
 }
@@ -108,7 +112,7 @@ header{
 /*トップ　メニューブロック全体への指定*/
 #menubar {
 	position: absolute;
-	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	bottom: 30%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 	left: 0px;
 	width: 100%;
 	text-align: center;
@@ -141,6 +145,11 @@ header{
 
 /*メイン　メニューブロック全体への指定*/
 
+.menubar-list {
+	display: flex;
+	justify-content: center;
+}
+
 #main-menubar li a, .ddmenu-title {
   display: block;text-decoration: none;
   color: #fff;	/*文字色*/
@@ -172,6 +181,47 @@ ul.icon img {
 	height: 30px;
 }
 
+
+#slider{
+  width: 300px;
+  margin: 0 auto;
+}
+
+button{
+  margin: 0;
+	padding: 0;
+	color: white;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.slide-arrow{
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+.prev-arrow{
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 15px solid #113463;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.next-arrow{
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-right: 0 solid transparent;
+  border-left: 15px solid #113463;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
 
 
 /*コンテンツ（上のcontainerの中のブロック）

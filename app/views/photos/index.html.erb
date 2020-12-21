@@ -8,11 +8,13 @@
       <% @photos.each do |photo| %>
       <li class='photo-content'>
         <div class="photo-img-content">
-          <% photo.images.each do |image| %>
-            <%= link_to "#" do %>
-            <%= image_tag image, class: 'photo-img'%>
+          <div class="slider">
+            <% photo.images.each do |image| %>
+              <%= link_to "#" do %>
+              <%= image_tag image, class: 'photo-img'%>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
         </div>
         <div class='star-btn'>
           <%= image_tag "star.png", class:"star-icon" %>
@@ -72,3 +74,13 @@
 
 <!--ページの上部に戻る「↑」ボタン-->
 <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('.slide').slick();
+    });
+    </script>
