@@ -7,11 +7,13 @@
       <% @photos.each do |photo| %>
       <li class='photo-content'>
         <div class="photo-img-content">
-          <% photo.images.each do |image| %>
-            <%= link_to "#" do %>
-            <%= image_tag image, class: 'photo-img'%>
+          <div class="slider">
+            <% photo.images.each do |image| %>
+              <%= link_to "#" do %>
+              <%= image_tag image, class: 'photo-img'%>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
         </div>
         <div class='star-btn'>
           <%= image_tag "star.png", class:"star-icon" %>

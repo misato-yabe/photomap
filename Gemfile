@@ -67,4 +67,10 @@ gem "aws-sdk-s3", require: false
 
 gem "bulma-rails"
 
+
 gem 'ransack'
+
+gem 'jquery-rails'
+
+gem 'font-awesome-rails'
+
