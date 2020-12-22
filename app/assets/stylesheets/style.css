@@ -51,7 +51,7 @@ header{
 }
 
 .top-header{
-  height: 100%;
+  height: 70%;
   width: 100%;
   background: linear-gradient(to top, rgba(20, 20, 20, 0.7) 0%, rgba(35, 36, 36, 0.7) 100%),
   url(top.png);
@@ -60,6 +60,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-bottom: 5px solid #b4afaf;
 }
 
 .top-image {
@@ -111,7 +112,7 @@ header{
 /*トップ メニューブロック全体への指定*/
 #menubar {
 	position: absolute;
-	bottom: 30%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	top: 5%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 	left: 0px;
 	width: 100%;
 	text-align: center;
@@ -147,6 +148,7 @@ header{
 .menubar-list {
 	display: flex;
 	justify-content: center;
+	align-items: flex-start;
 }
 
 #main-menubar li a, .ddmenu-title {
@@ -296,7 +298,11 @@ footer {
 footer p {
 	color: #fff;	/*リンクテキストの文字色*/
 	text-decoration: none;
+}
 
+.footer ul {
+	display: flex;
+	align-items: left;
 }
 
 /*PAGE TOP（↑）設定
@@ -456,7 +462,7 @@ justify-content: center;
 .photo-content{
 	width: 350px;
 	height: 400px;
-	padding: 7px 7px 10px 7px;
+	padding: 7px 20px;
 }
 
 .photo-img-content{
