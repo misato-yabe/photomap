@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!,only:[:new]
-  before_action :search_product, only: [:index, :search]
+  before_action :search_photo, only: [:index, :search]
 
   def index
     @photos = Photo.all.order("created_at DESC")
@@ -21,6 +21,7 @@ class PhotosController < ApplicationController
 
   def search
     @results = @p.result.includes(:situation_id)
+    @photos = Photo.all.order("created_at DESC")
   end
 
   private
@@ -31,9 +32,8 @@ class PhotosController < ApplicationController
     .merge(user_id: current_user.id)
   end
 
-  def search_product
+  def search_photo
     @p = Photo.ransack(params[:q])
   end
-
 
 end
