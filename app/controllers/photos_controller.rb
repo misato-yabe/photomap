@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!,only:[:new]
+  before_action :search_photo, only: [:index, :search]
 
   def index
     @photos = Photo.all.order("created_at DESC")
@@ -18,6 +19,11 @@ class PhotosController < ApplicationController
     end
   end
 
+  def search
+    @situations = Situation.all
+    @results = @p.result.includes(:situation_id)
+  end
+
   private
 
   def photo_params
@@ -25,4 +31,9 @@ class PhotosController < ApplicationController
     .permit(:title,:comment,:prefecture_id,:situation_id,:weather_id,:month_id,:camera_id,:lens_id, images: [])
     .merge(user_id: current_user.id)
   end
+
+  def search_photo
+    @p = Photo.ransack(params[:q])
+  end
+
 end

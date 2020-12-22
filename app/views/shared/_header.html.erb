@@ -5,7 +5,7 @@
   <nav id="main-menubar">
     <ul class="menu">
       <li class='list-menu'>
-        <%= link_to 'Serch', photos_path, class: "serch" %>
+        <%= link_to 'Serch', photos_search_path, class: "serch" %>
       <% if user_signed_in? %>
         <%= link_to 'My Page', user_path(current_user.id), class: "mypage" %>
         <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "Logout" %>

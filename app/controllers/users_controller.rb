@@ -3,6 +3,5 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @nickname = user.nickname
     @photos = user.photos.order("created_at DESC")
-    # @photos = Photo.includes(:user).order("created_at DESC")
   end
 end
