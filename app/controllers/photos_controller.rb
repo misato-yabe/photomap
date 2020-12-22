@@ -20,8 +20,8 @@ class PhotosController < ApplicationController
   end
 
   def search
+    @situations = Situation.all
     @results = @p.result.includes(:situation_id)
-    @photos = Photo.all.order("created_at DESC")
   end
 
   private

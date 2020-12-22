@@ -1,55 +1,38 @@
 <%= render "shared/header" %>
 
 <div class='main'>
-<h1>
-  写真検索
-</h1>
-<%= search_form_for @p, url: photos_search_path do |f| %>
-  <%= f.label :situation_id_eq, 'シチュエーション' %>
-  <%= f.collection_select :situation_id_eq, Situation.all, :id, :name %>
-  <br>
-  <%= f.submit '検索' %>
-    <br>
-<% end %>
 
-<h1>
-  検索結果
-</h1>
-<%# 検索結果の個数で条件分岐 %>
-<% if @results.length !=0 %>
-  <% @results.each do |result| %>
-    <td>
+<%# 写真検索 %>
+  <h1>写真検索</h1>
+  <%= search_form_for @p, url: photos_search_path do |f| %>
+    <%= f.label :situation_eq, '撮影状況' %>
+    <%# <%= f.search_field :situation.name %>
+    <%= f.collection_select :situation_eq, @situations, :id, :name%>
     <br>
-    <li>
-      <%= result.name %>
-      <%= result.size %>
-      <%= result.status %>
-      <%= result.price %>
-      <%= result.category.name %>
-    </li>
+    <%= f.submit '検索' %>
+    <br>
   <% end %>
-<% else %>
-  該当する写真はありません
-  <br>
-  <%# 商品一覧 %>
-  <% @photos.each do |photo| %>
-    <ul class="photos-lists">
-      <li class='photo-content'>
-        <div class="photo-img-content">
-          <% photo.images.each do |image| %>
-            <%= link_to "#" do %>
-              <%= image_tag image, class: 'photo-img'%>
-            <% end %>
-          <% end %>
-        </div>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
+  <%# 写真検索 %>
+
+  <%# 検索結果 %>
+  <h1>検索結果</h1>
+  <% if @results.photo.present? %>
+    <% @results.each do |result| %>
+      <td>
+      <br>
+      <li>
+        <%= result.title %>
       </li>
-    </ul>
+    <% end %>
+  <% else %>
+    該当する写真はありません
+    <br>
+    <%# 写真一覧 %>
+
   <% end %>
-  <% end %>
+
+<%# 検索結果 %>
+
 </div>
 
 
