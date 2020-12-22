@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'photos/search'
   resource :toppages, only: [:index]
   resources :photos, only: [:index,:new,:create]
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit]
 end

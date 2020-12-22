@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 
-
 /*全端末（PC・タブレット・スマホ）共通設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -490,4 +489,114 @@ justify-content: center;
 	height: 20px;
 	margin: 5px,5px,10px,5px;
 	display: block;
+}
+
+/*マイページ
+---------------------------------------------------------------------------*/
+.profile-contents {
+	display: flex;
+	justify-content: center;
+	font-family: 'Arial', sans-serif;
+	color: #ccc;
+	margin-bottom: 30px;
+}
+
+.profile-content {
+	width: 70%;
+	height: 300px;
+	padding: 50px 0px 20px;
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 1px solid #ccc;
+}
+
+.user-image {
+	width: calc(100% - 70%);
+	min-width :100px;
+}
+
+.circle-image {
+	background-image: url("sample4.jpg");
+	width:250px;
+	height:250px;
+	background-size:cover;
+	border-radius:50%;
+	background-position: center;
+}
+
+.profile {
+	width : 70%;
+	padding: 15px 10px;
+}
+
+.user-name-btn {
+	display: flex;
+	justify-content: space-between;
+}
+
+.user-name {
+	height: 50px;
+	width: 200px;
+	padding-top: 10px;
+	font-size: 30px;
+}
+
+.number-info {
+	display: flex;
+	justify-content: flex-start;
+	padding: 10px 0px ;
+	font-size: 15px;
+}
+
+.number-post {
+	margin-right: 30px;
+}
+
+.number-follower {
+	margin-right: 30px;
+}
+
+.number-follow {
+	margin-right: 30px;
+}
+
+.registration-main {
+	width: 100%;
+	height: 150px;
+  background-color: #ccc;
+}
+
+.user-concept {
+	width: 100%;
+}
+
+.concept {
+	width: calc(100% - 8%);
+	height: 130px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #ccc;
+  font-size: 15px;
+  resize: none;
+}
+
+.form-btn {
+  width: 50%;
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.form--btn {
+	width: 230px;
+	height: 30px;
+  background: #9c701e;
+	border: 1px solid #9c701e;
+	border-radius: 4px;
+  color: #ccc;
+  font-size: 14px;
+	cursor: pointer;
+	margin-right: 40px;
 }

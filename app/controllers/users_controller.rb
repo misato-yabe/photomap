@@ -4,4 +4,8 @@ class UsersController < ApplicationController
     @nickname = user.nickname
     @photos = user.photos.order("created_at DESC")
   end
+
+  def edit
+    
+  end
 end
