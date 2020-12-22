@@ -63,7 +63,7 @@ header{
 }
 
 .top-image {
-	width: 300px;
+	width: 200px;
 	height: auto;
 	position: absolute;
 	top: 33%;
@@ -106,10 +106,9 @@ header{
 	animation-fill-mode: both;
 }
 
-
 /*トップメニュー
 ---------------------------------------------------------------------------*/
-/*トップ　メニューブロック全体への指定*/
+/*トップ メニューブロック全体への指定*/
 #menubar {
 	position: absolute;
 	bottom: 30%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
