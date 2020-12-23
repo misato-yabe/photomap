@@ -5,7 +5,9 @@
     <div class = "profile-content">
       <div class = "user-image">
         <div class = "circle-image">
-        <%# <%= f.file_field :images, id:"photo-image" %>
+        <%# <% if @user.images != nil %>
+        <%# <%= @user.images %>
+        <%# <% end %>
         </div>
       </div>
       <div class="profile">
@@ -15,9 +17,9 @@
           <% else %>
           <div class = "user-name"> ユーザー </div>
           <% end %>
-          <% if user_signed_in? && current_user.id%>
+          <% if user_signed_in? && current_user.id == @user.id %>
           <div class="form-btn">
-          <%= link_to "編集する" , edit_user_path(current_user.id), class:"form--btn" %>
+          <%= link_to "編集する" , edit_user_registration_path(current_user.id), class:"form--btn" %>
           </div>
           <% end %>
         </div>

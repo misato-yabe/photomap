@@ -1,7 +1,16 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>アカウントを編集する</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.file_field :user_image, id:"photo-image" , autocomplete: "アイコン画像"  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :concept %><br />
+    <%= f.text_area :concept, autofocus: true, autocomplete: "自己紹介"  %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
