@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users
+    devise_for :users, controllers: {
+      sessions: 'users/sessions'
+    }
 
   root 'toppages#index'
-  get 'photos/search'
+
   resource :toppages, only: [:index]
-  resources :photos, only: [:index,:new,:create]
-  resources :users, only: [:show, :edit]
+  resources :photos, only: [:index,:new,:create] do
+    collection do
+      get 'photos/search'
+    end
+  end
+  resources :users, only: [:show, :edit, :update]
 end
