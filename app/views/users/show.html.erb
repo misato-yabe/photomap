@@ -8,27 +8,38 @@
         <%# <%= f.file_field :images, id:"photo-image" %>
         </div>
       </div>
-      <%= form_with model: @user, url: "#", class: 'profile', local: true do |f| %>
-
-      <div class="user-name-btn">
-        <div class = "user-name"> <%= @nickname %> </div>
-        <div class="form-btn">
-          <%= f.submit "編集する", class:"form--btn" %>
+      <div class="profile">
+        <div class="user-name-btn">
+          <% if user_signed_in? && current_user.id %>
+          <div class = "user-name"> <%= @user.nickname %> </div>
+          <% else %>
+          <div class = "user-name"> ユーザー </div>
+          <% end %>
+          <% if user_signed_in? && current_user.id%>
+          <div class="form-btn">
+          <%= link_to "編集する" , edit_user_path(current_user.id), class:"form--btn" %>
+          </div>
+          <% end %>
         </div>
-      </div>
-      <div class="number-info">
-        <div class = "number-post"> 投稿件数  件 </div>
-        <div class = "number-follower"> フォロワー 53人 </div>
-        <div class = "number-follow"> フォロー中 65人 </div>
-      </div>
-      <div class = "user-concept">
-        <%= f.text_area :concept, class:"concept", placeholder:"例) はじめまして、都内を中心に活動している社会人です。"  %>
+        <% if @user != nil %>
+        <div class="number-info">
+          <div class = "number-post">投稿件数 <%= current_user.photos.count %> 件 </div>
+          <% end %>
 
-      <% end %>
+          <%# 未実装 %>
+          <div class = "number-follower"> フォロワー 53人 </div>
+          <div class = "number-follow"> フォロー中 65人 </div>
+          <%# 未実装 %>
+
+        </div>
+        <div class = "user-concept">
+          <div class ="concept">
+          <%# <%= @user.concept %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
 
   <div class = "photo-contents">
     <ul class="photos-lists">

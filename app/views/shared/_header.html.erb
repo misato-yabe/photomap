@@ -1,7 +1,6 @@
 <!--ヘッダー-->
 <header>
 <!--PC用（901px以上端末）メニュー-->
-  <%# <nav id="main-menubar"> %>
   <nav id="main-menubar">
     <ul class="menu">
       <li class='list-menu'>
@@ -18,7 +17,13 @@
     </ul>
     <ul class="icon">
       <li class='list-icon'>
-        <%= link_to @nickname , user_path(current_user.id), class: :greeting__link %>
+        <% if user_signed_in? && current_user.id %>
+          <div class = "user-icon">
+          <%= link_to image_tag("star.png", class:"icon"),user_path(current_user.id) %>
+          </div>
+          <% else %>
+          <div class = "user-icon"> ユーザー </div>
+          <% end %>
         <%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %>
         <%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %>
         <%= link_to image_tag("icon_instagram.png", class:"icon"),"/" %>
