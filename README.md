@@ -84,7 +84,6 @@ password：abc123 -->
 
 - マイページの編集
   [![Image from Gyazo](https://i.gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3.gif)](https://gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3)
-  ![Uploading 597e38aae2f6c0c1ea602477cbfd49a3.gif…]()
 
 
 ## ER図
