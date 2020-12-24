@@ -1,49 +1,92 @@
-# テーブル設計
+# PHOTOMAP
+- ユーザー管理機能
+    - アカウントの登録・更新
+    - アイコン画像の設定(マイページ・ヘッダーに表示)
+    - 自己紹介文の作成
 
-## users テーブル
+- 写真投稿機能
+    - 複数枚の写真の投稿
+    - 写真投稿をする際のプレビュー機能
+    - トップページ・マイページへの表示
 
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| nickname           | string  | null: false ,unique: true |
-| email              | string  | null: false ,unique: true |
-| last_name          | string  | null: false               |
-| first_name         | string  | null: false               |
-| last_name_kana     | string  | null: false               |
-| first_name_kana    | string  | null: false               |
-| birth_day          | integer | null: false               |
-| encrypted_password | string  | null: false ,unique: true |
+- 動画投稿機能
+- 写真検索機能
 
-### Association
+<!-- #### アプリURL
+##### https://photomap-32068.herokuapp.com/
 
-- has_many :photos
+#### テスト用アカウント
+email：abc123@gmail.com
+password：abc123 -->
 
-## photos テーブル
+# DEMO
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| prefecture_id | integer    | null: false                    |
-| situation_id  | integer    | null: false                    |
-| weather_id    | integer    | null: false                    |
-| month_id      | integer    | null: false                    |
-| camera_id     | integer    | null: false                    |
-| lens_id       | integer    | null: false                    |
-| comment       | text       |                                |
-| user          | references | null: false, foreign_key: true |
 
-### Association
+## 利用方法
 
-- belongs_to :user
-- belongs_to :area
+- ユーザー管理機能
+    - アカウントの登録
+        1. ページ上部の['Signin']を選択
+        2. 各項目を入力
+        3. ['アカウント登録']を選択
+        4. アカウントが登録されました
+    - アカウントの更新・自己紹介文の作成
+        1. マイページの['編集する']を選択
+        2. 各項目を入力（※アイコン画像は最初の1枚のみ登録可能です）
+        3. ['更新する']を選択
+        4. アカウントが更新されました
 
-## areas テーブル
+- 写真投稿機能
+    1. ログインしたアカウントでheaderの['Post']を選択
+    2. 各項目を入力
+    3. ['投稿する']
+    4. トップページに表示されます
+       尚、自身が投稿した写真はマイページに表示されます
 
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| area     | string     | null: false, foreign_key: true |
-| area_id  | references | null: false, foreign_key: true |
-| image_id | references | null: false, foreign_key: true |
+## 目指した課題解決
+#### 対象になる方
+##### 旅行や、写真撮影が好きな方に向けて
+- 紙の媒体が減りデジタル化が進む中、今まで旅行先で撮影した写真を見返す機会が減少したとを感じていました。
+そんな中、自身が撮影した写真を誰かと共有できるアプリがあれば便利だと思いました
+。
+また、地図上で表示させることにより、どの場所でどのような写真が撮れるのかを、視覚的に表現することで、誰もが一目でわかるアプリを作成していきます。
 
-### Association
+## 洗い出した要件
+- ユーザー管理機能
+    - アカウントの登録・更新
+    - アイコン画像の設定(マイページ・ヘッダーに表示)
+    - 自己紹介文の作成
+    - 投稿した写真の件数を表示
+    - フォローしている人数を表示 ※未実装
+    - フォローされている人数を表示 ※未実装
 
-- has_many :photos
+- 写真投稿機能
+    - 複数枚の写真の投稿
+        - 撮影時の詳細な情報を加えて投稿（タイトル/コメント/撮影場所/撮影状況/天候/撮影月/カメラ機種/レンズ種類 ）
+        - 複数枚投稿した写真に関しては、スライド機能を実装
+    - 写真投稿をする際のプレビュー機能の実装
+    - 写真詳細ページの作成 ※未実装
+        - 写真編集・削除ページの作成
+
+- 動画投稿機能 ※未実装
+    - 動画の投稿
+
+- 写真検索機能（MAP上で） ※未実装
+    - 日本地図の各都道府県をクリックすると、各地で撮影された写真が表示される
+    - 投稿のない地域については、MAP上で表示を変える
+
+- 写真検索機能 ※未実装
+    - 検索欄でキーワードを入力すると写真の一覧が表示される
+
+## 実装した機能
+
+- 複数枚の画像の投稿
+[![Image from Gyazo](https://i.gyazo.com/8ab46f30c10251350e60a284c6432b3f.gif)](https://gyazo.com/8ab46f30c10251350e60a284c6432b3f)
+
+- マイページの編集
+[![Image from Gyazo](https://i.gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3.gif)](https://gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3)
+
+## ER図
+
+![Test Image 3](/image/photomap.png)
+

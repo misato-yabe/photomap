@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
 
   def search
     @situations = Situation.all
-    @results = @p.result.includes(:situation_id)
+    @results = @p.result.includes(params[:situation_id])
   end
 
   private
