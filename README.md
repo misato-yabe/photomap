@@ -83,8 +83,7 @@ password：abc123 -->
   [![Image from Gyazo](https://i.gyazo.com/8ab46f30c10251350e60a284c6432b3f.gif)](https://gyazo.com/8ab46f30c10251350e60a284c6432b3f)
 
 - マイページの編集
-  [![Image from Gyazo](https://i.gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3.gif)](https://gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3)
-  [![Image from Gyazo](https://i.gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3.gif)](https://gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3)
+  <img src="597e38aae2f6c0c1ea602477cbfd49a3 (2).gif">
 
 
 ## ER図
