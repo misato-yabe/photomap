@@ -81,14 +81,14 @@ password：abc123 -->
 ## 実装した機能
 
 - 複数枚の画像の投稿
-[![Image from Gyazo](https://i.gyazo.com/8ab46f30c10251350e60a284c6432b3f.gif)](https://gyazo.com/8ab46f30c10251350e60a284c6432b3f)
+  [![Image from Gyazo](https://i.gyazo.com/8ab46f30c10251350e60a284c6432b3f.gif)](https://gyazo.com/8ab46f30c10251350e60a284c6432b3f)
 
-- マイページの編集
-[![Image from Gyazo](https://i.gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3.gif)](https://gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3)
-![Uploading 597e38aae2f6c0c1ea602477cbfd49a3.gif…]()
+<!-- - マイページの編集
+  [![Image from Gyazo](https://i.gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3.gif)](https://gyazo.com/597e38aae2f6c0c1ea602477cbfd49a3)
+  ![Uploading 597e38aae2f6c0c1ea602477cbfd49a3.gif…]() -->
 
 
 ## ER図
 
-![Uploading photomap.png…]()
+  ![Uploading photomap.png…]()
 
