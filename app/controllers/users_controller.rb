@@ -16,10 +16,9 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      flash[:notice] = "編集が完了しました"
       redirect_to user_path(@user)
     else
-      render :edit
+      render template: "devise/registrations/edit"
     end
   end
 

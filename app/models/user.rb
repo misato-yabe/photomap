@@ -16,17 +16,14 @@ class User < ApplicationRecord
       validates :last_name_kana
       validates :first_name_kana
     end
-  end
 
-  with_options uniqueness: true do
-    validates :nickname
-    validates :email
+    with_options uniqueness: true do
+      validates :nickname
+      validates :email
+    end
   end
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
   validates :password, presence: true, on: :create, format: { with: PASSWORD_REGEX, message: 'Include both letters and numbers' }
-
-
-  
 
 end

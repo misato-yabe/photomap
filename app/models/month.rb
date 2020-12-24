@@ -13,7 +13,7 @@ class Month < ActiveHash::Base
     { id: 11, name: '10月' },
     { id: 12, name: '11月' },
     { id: 13, name: '12月' },
-    { id: 14, name: '覚えていない' }
+    { id: 14, name: 'その他' }
   ]
   include ActiveHash::Associations
   has_many :photos
