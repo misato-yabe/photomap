@@ -52,7 +52,7 @@ header{
 .top-header{
   height: 70%;
   width: 100%;
-  background: linear-gradient(to top, rgba(20, 20, 20, 0.7) 0%, rgba(35, 36, 36, 0.7) 100%),
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.4) 0%, rgba(35, 36, 36, 0.3) 100%),
   url(top.png);
 	background-size: cover;
 	position: relative;
@@ -563,7 +563,6 @@ justify-content: center;
 .registration-main {
 	width: 100%;
 	height: 150px;
-  background-color: #ccc;
 }
 
 .user-concept {

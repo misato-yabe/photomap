@@ -1,17 +1,17 @@
 <div class="top-header">
   <%= link_to root_path, class:"top-image" do %>
-    <%= image_tag "logo.png" %>
+    <%= image_tag "logo.svg" %>
   <% end %>
   <nav id="menubar">
     <ul class="menubar-list">
         <li><%= link_to 'Search', photos_search_photos_path, class: "serch" %></li>
       <% if user_signed_in? %>
         <li><%= link_to 'My Page', user_path(current_user.id), class: "mypage" %></li>
-        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout"%></li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "logout"%></li>
         <li><%= link_to 'Post', new_photo_path , class: "post" %></li>
       <% else %>
-        <li><%= link_to 'Signin',new_user_registration_path, class: "signin" %></li>
-        <li><%= link_to 'Login', new_user_session_path , method: :get, class: "login" %></li>
+        <li><%= link_to 'Sign in',new_user_registration_path, class: "signin" %></li>
+        <li><%= link_to 'Log in', new_user_session_path , method: :get, class: "login" %></li>
       <% end %>
     </ul>
   </nav>
@@ -27,7 +27,7 @@
           <div class="slider">
             <% photo.images.each do |image| %>
               <%= link_to "#" do %>
-              <%= image_tag image, class: 'photo-img'%>
+              <%= image_tag image.variant(gravity: :center, resize:"350x350^", crop:"350x350+0+0"), class: 'photo-img'%>
               <% end %>
             <% end %>
           </div>

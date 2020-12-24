@@ -20,8 +20,7 @@ class PhotosController < ApplicationController
   end
 
   def search
-    @situations = Situation.all
-    @results = @p.result.includes(params[:situation_id])
+    @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
   end
 
   private

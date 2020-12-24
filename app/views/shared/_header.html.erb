@@ -4,12 +4,12 @@
       <li class='list-menu'>
         <%= link_to 'Search',  photos_search_photos_path, class: "serch" %>
       <% if user_signed_in? %>
-        <%= link_to 'My Page', user_path(current_user.id), class: "mypage" %>
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %>
+        <%= link_to 'Top page', root_path, class: "toppage" %>
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "logout" %>
         <%= link_to 'Post', new_photo_path, class: "post" %>
       <% else %>
-        <%= link_to 'Signin',new_user_registration_path, class: "signin" %>
-        <%= link_to 'Login', new_user_session_path , method: :get, class: "login" %>
+        <%= link_to 'Sign in',new_user_registration_path, class: "signin" %>
+        <%= link_to 'Log in', new_user_session_path , method: :get, class: "login" %>
       <% end %>
       </li>
     </ul>

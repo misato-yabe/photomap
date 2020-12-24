@@ -4,10 +4,24 @@
 
 <%# 写真検索 %>
   <h1>写真検索</h1>
-  <%= search_form_for @p, url: photos_search_path do |f| %>
-    <%= f.label :situation_eq, '撮影状況' %>
-    <%# <%= f.search_field :situation.name %>
-    <%= f.collection_select :situation_eq, @situations, :id, :name%>
+  <%= search_form_for @p, url: photos_search_photos_path do |f| %>
+    <%= f.label '撮影場所' %>
+    <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name%>
+    <br>
+    <%= f.label '撮影状況' %>
+    <%= f.collection_select :situation_id_eq, Situation.all, :id, :name%>
+    <br>
+    <%= f.label '天候' %>
+    <%= f.collection_select :weather_id_eq, Weather.all, :id, :name%>
+    <br>
+    <%= f.label '撮影月' %>
+    <%= f.collection_select :month_id_eq, Month.all, :id, :name%>
+    <br>
+    <%= f.label 'カメラ' %>
+    <%= f.collection_select :camera_id_eq, Camera.all, :id, :name%>
+    <br>
+    <%= f.label '撮影月' %>
+    <%= f.collection_select :lens_id_eq, Len.all, :id, :name%>
     <br>
     <%= f.submit '検索' %>
     <br>
@@ -15,22 +29,36 @@
   <%# 写真検索 %>
 
   <%# 検索結果 %>
+  <br>
   <h1>検索結果</h1>
-  <% if @results.photo.present? %>
+  <br>
+  <div class='main'>
+  <ul class="photos-lists">
+  <% if @results.length != 0 %>
     <% @results.each do |result| %>
-      <td>
-      <br>
-      <li>
-        <%= result.title %>
-      </li>
+        <li class='photo-content'>
+          <div class="photo-img-content">
+            <div class="slider">
+              <% result.images.each do |image| %>
+                <%= link_to "#" do %>
+                <%= image_tag image.variant(gravity: :center, resize:"350x350^", crop:"350x350+0+0"), class: 'photo-img'%>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
+          </div>
+        </li>
     <% end %>
   <% else %>
+    <br>
     該当する写真はありません
     <br>
-    <%# 写真一覧 %>
-
   <% end %>
-
+  </ul>
+</div>
 <%# 検索結果 %>
 
 </div>

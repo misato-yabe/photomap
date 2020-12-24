@@ -10,7 +10,8 @@ class Camera < ActiveHash::Base
     { id: 8, name: 'ペンタックス(PENTAX)' },
     { id: 9, name: 'シグマ(SIGMA)' },
     { id: 10, name: 'ライカ(Leica)' },
-    { id: 11, name: 'その他' }
+    { id: 11, name: 'スマートフォン' },
+    { id: 12, name: 'その他' }
   ]
   include ActiveHash::Associations
   has_many :photos

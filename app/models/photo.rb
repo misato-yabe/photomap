@@ -23,4 +23,12 @@ class Photo < ApplicationRecord
     validates :camera_id
     validates :lens_id
   end
+
+  def self.search(search)
+    if search != ""
+      Photo.where("prefecture_id = ?", params[:prefecture_id]) .pluck(:id)
+    else
+      Photo.all
+    end
+  end
 end

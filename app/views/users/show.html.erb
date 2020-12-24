@@ -52,7 +52,7 @@
             <div class="slider">
               <% photo.images.each do |image| %>
                 <%= link_to "#" do %>
-                <%= image_tag image, class: 'photo-img'%>
+                <%= image_tag image.variant(gravity: :center, resize:"350x350^", crop:"350x350+0+0"), class: 'photo-img'%>
                 <% end %>
               <% end %>
             </div>
