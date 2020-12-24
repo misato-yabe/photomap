@@ -88,6 +88,5 @@ password：abc123 -->
 
 
 ## ER図
-
-![Uploading photomap.png…]()
+![ER図](photomap.png)
 
