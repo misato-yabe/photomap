@@ -10,8 +10,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :user_image, "アイコン画像" %><br>
-    <%= f.file_field :user_image, id:"photo-image" , autocomplete: "アイコン画像"  %>
+    <%= f.label :image, "アイコン画像" %><br>
+    <%= f.file_field :image, id:"photo-image" , autocomplete: "アイコン画像"  %>
+    <div id="image-list"></div>
   </div>
 
   <div class="field">

@@ -4,11 +4,11 @@
   <div class="profile-contents">
     <div class = "profile-content">
       <div class = "user-image">
-        <div class = "circle-image">
-        <%# <% if @user.images != nil %>
-        <%# <%= @user.images %>
-        <%# <% end %>
-        </div>
+        <% if @user.image.attached? %>
+        <%= image_tag @user.image,class:"circle-image" %>
+        <% else %>
+        <%= image_tag("sample4.jpg",class:"circle-image")%>
+        <% end %>
       </div>
       <div class="profile">
         <div class="user-name-btn">

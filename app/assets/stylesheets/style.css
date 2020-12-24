@@ -516,7 +516,7 @@ justify-content: center;
 }
 
 .circle-image {
-	background-image: url("sample4.jpg");
+	background-image: url("default.jpg");
 	width:250px;
 	height:250px;
 	background-size:cover;

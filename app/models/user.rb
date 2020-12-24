@@ -5,6 +5,7 @@ class User < ApplicationRecord
           :recoverable, :rememberable, :validatable
 
   has_many :photos
+  has_one_attached :image
 
   with_options presence: true do
     with_options format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'Full-width characters' } do
