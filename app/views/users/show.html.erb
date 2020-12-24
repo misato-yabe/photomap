@@ -13,14 +13,14 @@
       <div class="profile">
         <div class="user-name-btn">
           <% if user_signed_in? && current_user.id %>
-          <div class = "user-name"> <%= @user.nickname %> </div>
+            <div class = "user-name"> <%= @user.nickname %> </div>
           <% else %>
-          <div class = "user-name"> ユーザー </div>
+            <div class = "user-name"> ユーザー </div>
           <% end %>
           <% if params[:id].nil? || @user.id == current_user.id %>
-          <div class="form-btn">
-          <%= link_to "編集する" , edit_user_registration_path(current_user.id), class:"form--btn" %>
-          </div>
+            <div class="form-btn">
+            <%= link_to "編集する" , edit_user_registration_path(current_user.id), class:"form--btn" %>
+            </div>
           <% end %>
         </div>
         <% if @user != nil %>
@@ -36,7 +36,7 @@
         </div>
         <div class = "user-concept">
           <div class ="concept">
-          <%# <%= @user.concept %>
+          <%= @user.concept %>
           </div>
         </div>
       </div>
