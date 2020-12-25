@@ -1,37 +1,42 @@
 <%= render "shared/header" %>
 
 <div class='main'>
-  <h1>MAP検索</h1>
-<div id="map-container"></div>
-<%# 写真検索 %>
-  <h1>写真検索</h1>
-  <%= search_form_for @p, url: photos_search_photos_path do |f| %>
-    <%= f.label '撮影場所' %>
-    <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name%>
-    <br>
-    <%= f.label '撮影状況' %>
-    <%= f.collection_select :situation_id_eq, Situation.all, :id, :name%>
-    <br>
-    <%= f.label '天候' %>
-    <%= f.collection_select :weather_id_eq, Weather.all, :id, :name%>
-    <br>
-    <%= f.label '撮影月' %>
-    <%= f.collection_select :month_id_eq, Month.all, :id, :name%>
-    <br>
-    <%= f.label 'カメラ' %>
-    <%= f.collection_select :camera_id_eq, Camera.all, :id, :name%>
-    <br>
-    <%= f.label '撮影月' %>
-    <%= f.collection_select :lens_id_eq, Len.all, :id, :name%>
-    <br>
-    <%= f.submit '検索' %>
-    <br>
-  <% end %>
+  <%# 写真検索 %>
+  <div class="map-form-search">
+    <div class= "map-search">
+      <h1>MAP検索</h1>
+      <div id="map-container"></div>
+    </div>
+    <div class="form-search">
+      <h1>写真検索</h1>
+      <%= search_form_for @p, url: photos_search_photos_path do |f| %>
+        <%= f.label '撮影場所' %>
+        <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name%>
+        <br>
+        <%= f.label '撮影状況' %>
+        <%= f.collection_select :situation_id_eq, Situation.all, :id, :name%>
+        <br>
+        <%= f.label '天候' %>
+        <%= f.collection_select :weather_id_eq, Weather.all, :id, :name%>
+        <br>
+        <%= f.label '撮影月' %>
+        <%= f.collection_select :month_id_eq, Month.all, :id, :name%>
+        <br>
+        <%= f.label 'カメラ' %>
+        <%= f.collection_select :camera_id_eq, Camera.all, :id, :name%>
+        <br>
+        <%= f.label '撮影月' %>
+        <%= f.collection_select :lens_id_eq, Len.all, :id, :name%>
+        <br>
+        <%= f.submit '検索' %>
+        <br>
+      <% end %>
+    </div>
+  </div>
   <%# 写真検索 %>
 
   <%# 検索結果 %>
   <br>
-  <h1>検索結果</h1>
   <br>
   <div class='main'>
   <ul class="photos-lists">

@@ -52,21 +52,21 @@ header{
 .top-header{
   height: 70%;
   width: 100%;
-  background: linear-gradient(to top, rgba(20, 20, 20, 0.4) 0%, rgba(35, 36, 36, 0.3) 100%),
-  url(top.png);
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.5) 0%, rgba(35, 36, 36, 0.5) 100%),
+  url(santa1.jpg);
 	background-size: cover;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-bottom: 5px solid #b4afaf;
+	border-bottom: 2px solid #b4afaf;
 }
 
 .top-image {
 	width: 200px;
 	height: auto;
 	position: absolute;
-	top: 33%;
+	top: 25%;
 }
 
 /*メインページ*/
@@ -111,7 +111,7 @@ header{
 /*トップ メニューブロック全体への指定*/
 #menubar {
 	position: absolute;
-	top: 5%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 	left: 0px;
 	width: 100%;
 	text-align: center;
@@ -131,6 +131,7 @@ header{
 	color: #fff;	/*文字色*/
 	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
 	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+	font-size: 23px;
 }
 
 /*マウスオン時の指定*/
@@ -449,6 +450,19 @@ ol {
 	color: #fff;
 	margin: 10px 50px;
 	font-size: 20px;
+}
+
+.map-form-search{
+	display: flex;
+}
+
+.map-search{
+	margin: 5%;
+}
+
+
+.form-search{
+margin: 10% 20%;
 }
 
 .photos-lists {
