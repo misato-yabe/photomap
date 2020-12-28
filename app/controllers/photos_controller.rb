@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!,only:[:new]
-  before_action :search_photo, only: [:index, :search]
+  before_action :search_photo, only: [:index, :search,:search_map]
 
   def index
     @photos = Photo.all.order("created_at DESC")
@@ -21,6 +21,10 @@ class PhotosController < ApplicationController
 
   def search
     @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
+    if params[:sort] == 'tohoku'
+      @event = Photo.where(prefecture_id:8)
+      @events = @event.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id]).order("created_at DESC")
+    end
   end
 
   private

@@ -33,7 +33,7 @@
             borderLineWidth     : 0.25,
             lineColor           : "#a0a0a0",      // Border Line of the element and the partition line when "movesIsland" is true.
             lineWidth           : 1,
-            drawsBoxLine        : true,
+            drawsBoxLine        : "#ffffff",
             showsPrefectureName : false,
             prefectureNameType  : "full",
             showsAreaName       : false,
