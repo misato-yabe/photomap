@@ -3,35 +3,45 @@
 <div class='main'>
   <%# 写真検索 %>
   <div class="map-form-search">
+
+    <%# MAP検索 %>
     <div class= "map-search">
-      <h1>MAP検索</h1>
       <div id="map-container"></div>
     </div>
+    <%# MAP検索 %>
+
+    <%# 詳細検索 %>
+
+
     <div class="form-search">
-      <h1>詳細検索</h1>
-      <%= search_form_for @p, url: photos_search_photos_path do |f| %>
-        <%= f.label '撮影場所' %>
-        <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, :include_blank => '指定なし'%>
-        <br>
-        <%= f.label '撮影状況' %>
-        <%= f.collection_select :situation_id_eq, Situation.all, :id, :name, :include_blank => '指定なし'%>
-        <br>
-        <%= f.label '天候' %>
-        <%= f.collection_select :weather_id_eq, Weather.all, :id, :name, :include_blank => '指定なし'%>
-        <br>
-        <%= f.label '撮影月' %>
-        <%= f.collection_select :month_id_eq, Month.all, :id, :name, :include_blank => '指定なし'%>
-        <br>
-        <%= f.label 'カメラ' %>
-        <%= f.collection_select :camera_id_eq, Camera.all, :id, :name, :include_blank => '指定なし'%>
-        <br>
-        <%= f.label '撮影月' %>
-        <%= f.collection_select :lens_id_eq, Len.all, :id, :name, :include_blank => '指定なし'%>
-        <br>
-        <%= f.submit '検索' %>
-        <br>
-      <% end %>
+        <div class="form-container">詳細検索</div>
+        <%= search_form_for @p, url: photos_search_photos_path do |f| %>
+        <div class="form-container cp_sl01 ">
+          <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name,  :include_blank => '撮影場所' %>
+        </div>
+        <div class="form-container cp_sl01 ">
+          <%= f.collection_select :situation_id_eq, Situation.all, :id, :name, :include_blank => '撮影状況'%>
+        </div>
+        <div class="form-container cp_sl01 ">
+          <%= f.collection_select :weather_id_eq, Weather.all, :id, :name, :include_blank => '天気'%>
+        </div>
+        <div class="form-container cp_sl01 ">
+          <%= f.collection_select :month_id_eq, Month.all, :id, :name, :include_blank => '撮影月'%>
+        </div>
+        <div class="form-container cp_sl01 ">
+          <%= f.collection_select :camera_id_eq, Camera.all, :id, :name, :include_blank => 'カメラメーカー'%>
+        </div>
+        <div class="form-container cp_sl01 ">
+          <%= f.collection_select :lens_id_eq, Len.all, :id, :name, :include_blank => 'レンズの種類'%>
+        </div>
+        <div class="submit">
+          <%= f.submit "検索" ,class:"btn btn-border" %>
+        </div>
+        <% end %>
+      
     </div>
+    <%# 詳細検索 %>
+
   </div>
   <%# 写真検索 %>
 

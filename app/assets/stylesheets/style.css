@@ -454,16 +454,105 @@ ol {
 
 .map-form-search{
 	display: flex;
+	align-items: center;
+	margin: 5% 0;
 }
 
 .map-search{
-	margin: 5%;
+	margin: 0 5%;
 }
 
 
 .form-search{
-margin: 10% 20%;
+height: 90%;
+width: calc(100% - 800px);
+margin: 0 3%;
+padding-left: 1%;
+border-left: 1px solid #fff;
 }
+
+.form-container{
+font-size: 16px;
+border-bottom: 1px solid rgb(119, 119, 119);
+border-radius: 2px;
+}
+
+/* ↓プルダウン */
+
+.form-container {
+	overflow: hidden;
+	width: 90%;
+	margin: 2em auto;
+	text-align: center;
+}
+.form-container select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.form-container select::-ms-expand {
+  display: none;
+}
+.form-container.cp_sl01 {
+	position: relative;
+	border-bottom: 1px solid #d3d1d1;
+	border-radius: 2px;
+	background: #5a5a5a3b;
+}
+.form-container.cp_sl01::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #d4d2d2;
+	pointer-events: none;
+}
+.form-container.cp_sl01 select {
+	padding: 8px 38px 8px 8px;
+	color: #faf8f8;
+}
+
+/* ↑プルダウン */
+
+
+/* ↓送信ボタン */
+.submit{
+	width: 100%;
+	margin: 2em auto;
+	text-align: center;
+}
+
+.btn-border {
+	width: 90%;
+	height: 50px;
+	font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 0;
+	background: rgb(204, 203, 203);
+	padding: 0 auto;
+}
+
+.btn-border:hover {
+  color: #fff;
+	background: #000;
+
+}
+/* ↑送信ボタン */
+
 
 .photos-lists {
 width: 100vw;
