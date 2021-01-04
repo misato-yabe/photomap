@@ -22,10 +22,14 @@ class PhotosController < ApplicationController
     @p = Photo.ransack(params[:q])
     @photos = Photo.all
     @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
-    # if params[:sort] == 'tohoku'
-    #   @event = Photo.where(prefecture_id:8)
-    #   @events = @event.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id]).order("created_at DESC")
+    # if params[:sort] == 'hokkaido'
+    #   @results = Photo.where(prefecture_id: 2 ).order("id DESC")
+    # else
+    # @p = Photo.ransack(params[:q])
+    # @photos = Photo.all
+    # @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
     # end
+
   end
 
   private

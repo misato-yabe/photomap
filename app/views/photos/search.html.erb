@@ -8,7 +8,7 @@
       <div id="map-container"></div>
     </div>
     <div class="form-search">
-      <h1>写真検索</h1>
+      <h1>詳細検索</h1>
       <%= search_form_for @p, url: photos_search_photos_path do |f| %>
         <%= f.label '撮影場所' %>
         <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, :include_blank => '指定なし'%>
