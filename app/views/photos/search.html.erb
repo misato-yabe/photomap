@@ -11,22 +11,22 @@
       <h1>写真検索</h1>
       <%= search_form_for @p, url: photos_search_photos_path do |f| %>
         <%= f.label '撮影場所' %>
-        <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name%>
+        <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, :include_blank => '指定なし'%>
         <br>
         <%= f.label '撮影状況' %>
-        <%= f.collection_select :situation_id_eq, Situation.all, :id, :name%>
+        <%= f.collection_select :situation_id_eq, Situation.all, :id, :name, :include_blank => '指定なし'%>
         <br>
         <%= f.label '天候' %>
-        <%= f.collection_select :weather_id_eq, Weather.all, :id, :name%>
+        <%= f.collection_select :weather_id_eq, Weather.all, :id, :name, :include_blank => '指定なし'%>
         <br>
         <%= f.label '撮影月' %>
-        <%= f.collection_select :month_id_eq, Month.all, :id, :name%>
+        <%= f.collection_select :month_id_eq, Month.all, :id, :name, :include_blank => '指定なし'%>
         <br>
         <%= f.label 'カメラ' %>
-        <%= f.collection_select :camera_id_eq, Camera.all, :id, :name%>
+        <%= f.collection_select :camera_id_eq, Camera.all, :id, :name, :include_blank => '指定なし'%>
         <br>
         <%= f.label '撮影月' %>
-        <%= f.collection_select :lens_id_eq, Len.all, :id, :name%>
+        <%= f.collection_select :lens_id_eq, Len.all, :id, :name, :include_blank => '指定なし'%>
         <br>
         <%= f.submit '検索' %>
         <br>
