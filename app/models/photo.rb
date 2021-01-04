@@ -17,11 +17,6 @@ class Photo < ApplicationRecord
 
   with_options numericality: { other_than: 1, message: "%{value} の選択は無効です" } do
     validates :prefecture_id
-    validates :situation_id
-    validates :weather_id
-    validates :month_id
-    validates :camera_id
-    validates :lens_id
   end
 
   def self.search(search)

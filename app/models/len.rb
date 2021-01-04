@@ -6,7 +6,8 @@ class Len < ActiveHash::Base
     { id: 4, name: 'マクロ' },
     { id: 5, name: '標準ズーム' },
     { id: 6, name: '望遠ズーム' },
-    { id: 7, name: '広角ズーム' }
+    { id: 7, name: '広角ズーム' },
+    { id: 8, name: 'その他' }
   ]
   include ActiveHash::Associations
   has_many :photos

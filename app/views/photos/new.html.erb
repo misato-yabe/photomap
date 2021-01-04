@@ -48,35 +48,30 @@
       <div class="situation">
       <h5>撮影状況</h5>
       </div>
-      <span class="indispensable">必須</span>
       <%= f.collection_select(:situation_id, Situation.all, :id, :name, {}, {class:"select-box", id:"situation-category"}) %>
     </div>
     <div class="weather-field">
       <div class="weather">
       <h5>天候</h5>
       </div>
-      <span class="indispensable">必須</span>
       <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"select-box", id:"weather-category"}) %>
     </div>
     <div class="month-field">
       <div class="month">
       <h5>撮影月</h5>
       </div>
-      <span class="indispensable">必須</span>
       <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"month-category"}) %>
     </div>
     <div class="camera-field">
       <div class="camera">
       <h5>カメラ</h5>
       </div>
-      <span class="indispensable">必須</span>
       <%= f.collection_select(:camera_id, Camera.all, :id, :name, {}, {class:"select-box", id:"camera-category"}) %>
     </div>
     <div class="lens-field">
       <div class="lens">
       <h5>レンズ</h5>
       </div>
-      <span class="indispensable">必須</span>
       <%= f.collection_select(:lens_id, Len.all, :id, :name, {}, {class:"select-box", id:"lens-category"}) %>
     </div>
   </div>
