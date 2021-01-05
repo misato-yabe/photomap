@@ -8,11 +8,11 @@ class User < ApplicationRecord
   has_one_attached :image
 
   with_options presence: true do
-    with_options format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'Full-width characters' } do
+    with_options format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力してください' } do
       validates :name
     end
 
-    with_options format: { with: /\A([ァ-ン]|ー)+\z/, message: 'Full-width katakana characters' } do
+    with_options format: { with: /\A([ァ-ン]|ー)+\z/, message: 'は全角カタカナで入力してください' } do
       validates :name_kana
     end
 
@@ -23,6 +23,6 @@ class User < ApplicationRecord
   end
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
-  validates :password, presence: true, on: :create, format: { with: PASSWORD_REGEX, message: 'Include both letters and numbers' }
+  validates :password, presence: true, on: :create, format: { with: PASSWORD_REGEX, message: 'は6文字以上の半角英数字で入力してください' }
 
 end

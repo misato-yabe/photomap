@@ -15,7 +15,7 @@ class Photo < ApplicationRecord
     validates :images
   end
 
-  with_options numericality: { other_than: 1, message: "%{value} の選択は無効です" } do
+  with_options numericality: { other_than: 1, message: "を選択してください" } do
     validates :prefecture_id
   end
 

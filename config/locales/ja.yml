@@ -1,0 +1,11 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       name: 名前
+       name_kana: 名前（カナ）
+     photo:
+       title: タイトル
+       images: 画像
+       prefecture_id: 撮影場所
