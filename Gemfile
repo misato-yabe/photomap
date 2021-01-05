@@ -76,3 +76,5 @@ gem 'font-awesome-rails'
 
 # gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'jcanvas-rails', '~> 0.1.0'
+
+gem 'rails-i18n'
