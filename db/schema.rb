@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 2020_12_11_065558) do
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.integer "prefecture_id", null: false
-    t.integer "situation_id", null: false
-    t.integer "weather_id", null: false
-    t.integer "month_id", null: false
-    t.integer "camera_id", null: false
-    t.integer "lens_id", null: false
+    t.integer "situation_id"
+    t.integer "weather_id"
+    t.integer "month_id"
+    t.integer "camera_id"
+    t.integer "lens_id"
     t.text "comment"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
@@ -52,10 +52,8 @@ ActiveRecord::Schema.define(version: 2020_12_11_065558) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
-    t.string "last_name", null: false
-    t.string "first_name", null: false
-    t.string "last_name_kana", null: false
-    t.string "first_name_kana", null: false
+    t.string "name", null: false
+    t.string "name_kana", null: false
     t.text "concept"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

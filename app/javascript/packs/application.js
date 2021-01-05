@@ -12,6 +12,8 @@ require("../fixmenu_pagetop")
 require('./preview')
 require('jquery')
 require('slide.js')
+require('japan-map.js')
+require('jquery.japan-map.js')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

@@ -12,7 +12,8 @@ class Situation < ActiveHash::Base
     { id: 10, name: 'スポーツ' },
     { id: 11, name: '日本' },
     { id: 12, name: '世界' },
-    { id: 13, name: 'イベント' }
+    { id: 13, name: 'イベント' },
+    { id: 14, name: 'その他' }
   ]
   include ActiveHash::Associations
   has_many :photos

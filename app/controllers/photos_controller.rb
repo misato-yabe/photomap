@@ -1,6 +1,5 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!,only:[:new]
-  before_action :search_photo, only: [:index, :search]
 
   def index
     @photos = Photo.all.order("created_at DESC")
@@ -20,7 +19,17 @@ class PhotosController < ApplicationController
   end
 
   def search
+    @p = Photo.ransack(params[:q])
+    @photos = Photo.all
     @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
+    # if params[:sort] == 'hokkaido'
+    #   @results = Photo.where(prefecture_id: 2 ).order("id DESC")
+    # else
+    # @p = Photo.ransack(params[:q])
+    # @photos = Photo.all
+    # @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
+    # end
+
   end
 
   private
@@ -29,10 +38,6 @@ class PhotosController < ApplicationController
     params.require(:photo)
     .permit(:title,:comment,:prefecture_id,:situation_id,:weather_id,:month_id,:camera_id,:lens_id, images: [])
     .merge(user_id: current_user.id)
-  end
-
-  def search_photo
-    @p = Photo.ransack(params[:q])
   end
 
 end

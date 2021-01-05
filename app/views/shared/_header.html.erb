@@ -2,9 +2,9 @@
   <nav id="main-menubar">
     <ul class="menu">
       <li class='list-menu'>
+        <%= link_to 'Top page', root_path, class: "toppage" %>
         <%= link_to 'Search',  photos_search_photos_path, class: "serch" %>
       <% if user_signed_in? %>
-        <%= link_to 'Top page', root_path, class: "toppage" %>
         <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "logout" %>
         <%= link_to 'Post', new_photo_path, class: "post" %>
       <% else %>
@@ -21,9 +21,7 @@
           <% end %>
         </li>
       <% else %>
-        <li>
-          <%= image_tag("default.jpg",class:"circle-image") %>
-        </li>
+        <li><%= link_to image_tag("default.jpg", class:"circle-image"),"/" %></li>
       <% end %>
         <li><%= link_to image_tag("icon_facebook.png", class:"icon"),"/" %></li>
         <li><%= link_to image_tag("icon_twitter.png", class:"icon"),"/" %></li>

@@ -14,7 +14,7 @@ body {
 	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
 	font-size: 16px;	/*文字サイズ*/
 	line-height: 2;		/*行間*/
-  background-color: #1a1919;
+	background-color: #1a1919;
 }
 
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
@@ -52,21 +52,21 @@ header{
 .top-header{
   height: 70%;
   width: 100%;
-  background: linear-gradient(to top, rgba(20, 20, 20, 0.4) 0%, rgba(35, 36, 36, 0.3) 100%),
-  url(top.png);
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.5) 0%, rgba(35, 36, 36, 0.5) 100%),
+  url(santa1.jpg);
 	background-size: cover;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-bottom: 5px solid #b4afaf;
+	border-bottom: 2px solid #b4afaf;
 }
 
 .top-image {
 	width: 200px;
 	height: auto;
 	position: absolute;
-	top: 33%;
+	top: 25%;
 }
 
 /*メインページ*/
@@ -111,7 +111,7 @@ header{
 /*トップ メニューブロック全体への指定*/
 #menubar {
 	position: absolute;
-	top: 5%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 	left: 0px;
 	width: 100%;
 	text-align: center;
@@ -131,6 +131,7 @@ header{
 	color: #fff;	/*文字色*/
 	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
 	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+	font-size: 23px;
 }
 
 /*マウスオン時の指定*/
@@ -440,6 +441,7 @@ ol {
 
 .main{
 	width: 100%;
+	height: 100%;
 	min-height: calc(100vh - 100px);
 	padding-bottom: 30px;
 }
@@ -450,6 +452,158 @@ ol {
 	margin: 10px 50px;
 	font-size: 20px;
 }
+
+.map-form-search{
+	display: flex;
+	align-items: center;
+	margin: 5% 0;
+}
+
+.map-search{
+	margin: 0 5%;
+}
+
+
+.form-search{
+height: 90%;
+width: calc(100% - 800px);
+margin: 0 3%;
+padding-left: 1%;
+border-left: 1px solid #fff;
+text-align: center;
+}
+
+.form-container{
+font-size: 16px;
+border-bottom: 1px solid rgb(119, 119, 119);
+border-radius: 2px;
+}
+
+.user-form{
+	width: 0 auto;
+	padding-top: 5px;
+	margin: 0 24%;
+	text-align: center;
+}
+
+/* ↓プルダウン */
+
+.form-container {
+	overflow: hidden;
+	width: 90%;
+	margin: 2em auto;
+	text-align: center;
+}
+.form-container select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.form-container select::-ms-expand {
+  display: none;
+}
+.form-container.cp_sl01 {
+	position: relative;
+	border-bottom: 1px solid #d3d1d1;
+	border-radius: 2px;
+	background: #5a5a5a3b;
+}
+.form-container.cp_sl01::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #d4d2d2;
+	pointer-events: none;
+}
+.form-container.cp_sl01 select {
+	padding: 8px 38px 8px 8px;
+	color: #faf8f8;
+}
+
+/* ↑プルダウン */
+
+
+/* ↓送信ボタン */
+
+
+.btn-submit{
+	margin: 100px 0px;
+}
+
+.btn-flat-border {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #c0c0c0;
+  border: solid 2px #2b6859;
+  border-radius: 3px;
+	transition: .4s;
+	width: 30%;
+	min-width: 100px;
+}
+
+.btn-flat-border:hover {
+  background: #269fa3;
+  color: rgb(199, 199, 199);
+}
+/* ↑送信ボタン */
+
+/* ↓入力フォーム */
+
+.cp_iptxt {
+	display: flex;
+	width: 80%;
+	height: 100px;
+	margin: 40px auto;
+	border: none;
+	background-color: rgba(255, 255, 0, 0);
+	font: 15px sans-serif;
+	letter-spacing: 1px;
+	color: rgb(204, 203, 203);
+	align-items: flex-end;
+	line-height: 1.5em;
+	border-bottom: 2px solid #293a58;
+}
+
+.cp_iptxt label{
+	width: 35%;
+}
+
+
+.input-default {
+	font: 20px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	align-items: flex-end;
+	letter-spacing: 1px;
+	padding: 0px 1em;
+	margin-left: 20px;
+	color: rgb(204, 203, 203);
+	background-color: rgba(255, 255, 0, 0);
+	border: none;
+
+}
+
+.password-label{
+	display: block;
+}
+
+/* ↑入力フォーム */
 
 .photos-lists {
 width: 100vw;

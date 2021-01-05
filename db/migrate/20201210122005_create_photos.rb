@@ -3,11 +3,11 @@ class CreatePhotos < ActiveRecord::Migration[6.0]
     create_table :photos do |t|
       t.string :title , null: false
       t.integer :prefecture_id , null: false
-      t.integer :situation_id , null: false
-      t.integer :weather_id , null: false
-      t.integer :month_id , null: false
-      t.integer :camera_id , null: false
-      t.integer :lens_id , null: false
+      t.integer :situation_id
+      t.integer :weather_id
+      t.integer :month_id
+      t.integer :camera_id
+      t.integer :lens_id
       t.text :comment
       t.references :user , foreign_key: true
 
