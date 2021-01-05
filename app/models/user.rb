@@ -9,13 +9,11 @@ class User < ApplicationRecord
 
   with_options presence: true do
     with_options format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'Full-width characters' } do
-      validates :last_name
-      validates :first_name
+      validates :name
     end
 
     with_options format: { with: /\A([ァ-ン]|ー)+\z/, message: 'Full-width katakana characters' } do
-      validates :last_name_kana
-      validates :first_name_kana
+      validates :name_kana
     end
 
     with_options uniqueness: true do

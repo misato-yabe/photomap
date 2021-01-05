@@ -34,11 +34,13 @@
           <%# 未実装 %>
 
         </div>
+        <% if @user.concept != nil %>
         <div class = "user-concept">
           <div class ="concept">
           <%= @user.concept %>
           </div>
         </div>
+        <% end %>
       </div>
     </div>
   </div>

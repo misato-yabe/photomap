@@ -14,7 +14,7 @@ body {
 	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
 	font-size: 16px;	/*文字サイズ*/
 	line-height: 2;		/*行間*/
-  background-color: #1a1919;
+	background-color: #1a1919;
 }
 
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
@@ -441,6 +441,7 @@ ol {
 
 .main{
 	width: 100%;
+	height: 100%;
 	min-height: calc(100vh - 100px);
 	padding-bottom: 30px;
 }
@@ -469,12 +470,20 @@ width: calc(100% - 800px);
 margin: 0 3%;
 padding-left: 1%;
 border-left: 1px solid #fff;
+text-align: center;
 }
 
 .form-container{
 font-size: 16px;
 border-bottom: 1px solid rgb(119, 119, 119);
 border-radius: 2px;
+}
+
+.user-form{
+	width: 0 auto;
+	padding-top: 5px;
+	margin: 0 24%;
+	text-align: center;
 }
 
 /* ↓プルダウン */
@@ -530,29 +539,71 @@ border-radius: 2px;
 
 
 /* ↓送信ボタン */
-.submit{
-	width: 100%;
-	margin: 2em auto;
-	text-align: center;
+
+
+.btn-submit{
+	margin: 100px 0px;
 }
 
-.btn-border {
-	width: 90%;
-	height: 50px;
-	font-size: 16px;
-  border: 2px solid #000;
-  border-radius: 0;
-	background: rgb(204, 203, 203);
-	padding: 0 auto;
+.btn-flat-border {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #c0c0c0;
+  border: solid 2px #2b6859;
+  border-radius: 3px;
+	transition: .4s;
+	width: 30%;
+	min-width: 100px;
 }
 
-.btn-border:hover {
-  color: #fff;
-	background: #000;
-
+.btn-flat-border:hover {
+  background: #269fa3;
+  color: rgb(199, 199, 199);
 }
 /* ↑送信ボタン */
 
+/* ↓入力フォーム */
+
+.cp_iptxt {
+	display: flex;
+	width: 80%;
+	height: 100px;
+	margin: 40px auto;
+	border: none;
+	background-color: rgba(255, 255, 0, 0);
+	font: 15px sans-serif;
+	letter-spacing: 1px;
+	color: rgb(204, 203, 203);
+	align-items: flex-end;
+	line-height: 1.5em;
+	border-bottom: 2px solid #293a58;
+}
+
+.cp_iptxt label{
+	width: 35%;
+}
+
+
+.input-default {
+	font: 20px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	align-items: flex-end;
+	letter-spacing: 1px;
+	padding: 0px 1em;
+	margin-left: 20px;
+	color: rgb(204, 203, 203);
+	background-color: rgba(255, 255, 0, 0);
+	border: none;
+
+}
+
+.password-label{
+	display: block;
+}
+
+/* ↑入力フォーム */
 
 .photos-lists {
 width: 100vw;
