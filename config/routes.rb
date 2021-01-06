@@ -12,4 +12,8 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show, :edit, :update]
+
+  post 'follow/:id' => 'relationships#follow', as: 'follow' # フォローする
+  post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow' # フォロー外す
+
 end
