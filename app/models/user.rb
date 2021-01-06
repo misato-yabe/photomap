@@ -30,6 +30,8 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
   validates :password, presence: true, on: :create, format: { with: PASSWORD_REGEX, message: 'は6文字以上の半角英数字で入力してください' }
 
+  # ーー↓フォロー機能の実装ーー
+
     # ユーザーをフォローする
   def follow(user_id)
     follower.create(followed_id: user_id)
@@ -45,4 +47,17 @@ class User < ApplicationRecord
     following_user.include?(user)
   end
 
+  # ーー↑フォロー機能の実装ーー
+
+  # ーー↓SNS認証機能の実装ーー
+
+  def self.from_omniauth(auth)
+    sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
+    user = User.where(email: auth.info.email).first_or_initialize(
+      nickname: auth.info.name,
+        email: auth.info.email
+    )
+  end
+
+  # ーー↑SNS認証機能の実装ーー
 end
