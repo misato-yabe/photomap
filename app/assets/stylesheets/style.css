@@ -53,7 +53,7 @@ header{
   height: 70%;
   width: 100%;
   background: linear-gradient(to top, rgba(20, 20, 20, 0.5) 0%, rgba(35, 36, 36, 0.5) 100%),
-  url(santa1.jpg);
+  url(back.jpg);
 	background-size: cover;
 	position: relative;
 	display: flex;
