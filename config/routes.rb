@@ -5,10 +5,9 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
     }
 
-  root 'toppages#index'
+  root 'photos#index'
 
-  resource :toppages, only: [:index]
-  resources :photos, only: [:index,:new,:create] do
+  resources :photos, only: [:index,:new,:create,:show] do
     collection do
       get 'photos/search'
     end
