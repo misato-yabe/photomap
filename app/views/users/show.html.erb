@@ -57,21 +57,7 @@
     <ul class="photos-lists">
     <% if @photos.present? %>
         <% @photos.each do |photo| %>
-        <li class='photo-content'>
-          <div class="photo-img-content">
-            <div class="slider">
-              <% photo.images.each do |image| %>
-                <%= link_to "#" do %>
-                <%= image_tag image.variant(gravity: :center, resize:"350x350^", crop:"350x350+0+0"), class: 'photo-img'%>
-                <% end %>
-              <% end %>
-            </div>
-          </div>
-          <div class='star-btn'>
-            <%= image_tag "star.png", class:"star-icon" %>
-            <span class='star-count'>0</span>
-          </div>
-        </li>
+        <%= render partial: "shared/photo", locals: { photo: photo } %>
         <% end %>
     <% else %>
       <br>

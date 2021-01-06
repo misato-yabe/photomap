@@ -45,23 +45,9 @@
   <br>
   <div class='main'>
   <ul class="photos-lists">
-  <% if @results.length != 0 %>
-    <% @results.each do |result| %>
-        <li class='photo-content'>
-          <div class="photo-img-content">
-            <div class="slider">
-              <% result.images.each do |image| %>
-                <%= link_to "#" do %>
-                <%= image_tag image.variant(gravity: :center, resize:"350x350^", crop:"350x350+0+0"), class: 'photo-img'%>
-                <% end %>
-              <% end %>
-            </div>
-          </div>
-          <div class='star-btn'>
-            <%= image_tag "star.png", class:"star-icon" %>
-            <span class='star-count'>0</span>
-          </div>
-        </li>
+  <% if @photos.length != 0 %>
+    <% @photos.each do |photo| %>
+    <%= render partial: "shared/photo", locals: { photo: photo } %>
     <% end %>
   <% else %>
     <br>

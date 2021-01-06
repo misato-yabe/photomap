@@ -1,0 +1,15 @@
+<li class='photo-content'>
+  <div class="photo-img-content">
+    <div class="slider">
+      <% photo.images.each do |image| %>
+        <%= link_to photo_path(photo.id) do %>
+        <%= image_tag image, class: 'photo-img'%>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class='star-btn'>
+    <%= image_tag "star.png", class:"star-icon" %>
+    <span class='star-count'>0</span>
+  </div>
+</li>
