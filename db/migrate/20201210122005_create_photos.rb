@@ -7,7 +7,7 @@ class CreatePhotos < ActiveRecord::Migration[6.0]
       t.integer :weather_id
       t.integer :month_id
       t.integer :camera_id
-      t.integer :lens_id
+      t.integer :lenz_id
       t.text :comment
       t.references :user , foreign_key: true
 

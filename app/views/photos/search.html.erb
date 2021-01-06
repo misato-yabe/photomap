@@ -29,7 +29,7 @@
           <%= f.collection_select :camera_id_eq, Camera.all, :id, :name, :include_blank => 'カメラメーカー'%>
         </div>
         <div class="form-container cp_sl01 ">
-          <%= f.collection_select :lens_id_eq, Len.all, :id, :name, :include_blank => 'レンズの種類'%>
+          <%= f.collection_select :lenz_id_eq, Lenz.all, :id, :name, :include_blank => 'レンズの種類'%>
         </div>
         <div class="submit">
           <%= f.submit "検索" ,class:"btn-flat-border" %>

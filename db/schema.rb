@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_01_06_063445) do
     t.integer "weather_id"
     t.integer "month_id"
     t.integer "camera_id"
-    t.integer "lens_id"
+    t.integer "lenz_id"
     t.text "comment"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

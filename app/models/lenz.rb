@@ -1,4 +1,4 @@
-class Len < ActiveHash::Base
+class Lenz < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: 'ズーム' },

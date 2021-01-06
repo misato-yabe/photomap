@@ -23,13 +23,13 @@ class PhotosController < ApplicationController
   def search
     @p = Photo.ransack(params[:q])
     # @photos = Photo.all
-    @photos = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
+    @photos = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lenz_id])
     # if params[:sort] == 'hokkaido'
     #   @results = Photo.where(prefecture_id: 2 ).order("id DESC")
     # else
     # @p = Photo.ransack(params[:q])
     # @photos = Photo.all
-    # @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lens_id])
+    # @results = @p.result.includes(params[:prefecture_id],params[:situation_id],params[:weather_id],params[:month_id],params[:camera_id],params[:lenz_id])
     # end
 
   end
@@ -44,7 +44,7 @@ class PhotosController < ApplicationController
 
   def photo_params
     params.require(:photo)
-    .permit(:title,:comment,:prefecture_id,:situation_id,:weather_id,:month_id,:camera_id,:lens_id, images: [])
+    .permit(:title,:comment,:prefecture_id,:situation_id,:weather_id,:month_id,:camera_id,:lenz_id, images: [])
     .merge(user_id: current_user.id)
   end
 

@@ -68,11 +68,11 @@
       </div>
       <%= f.collection_select(:camera_id, Camera.all, :id, :name, {}, {class:"select-box", id:"camera-category"}) %>
     </div>
-    <div class="lens-field">
-      <div class="lens">
+    <div class="lenz-field">
+      <div class="lenz">
       <h5>レンズ</h5>
       </div>
-      <%= f.collection_select(:lens_id, Len.all, :id, :name, {}, {class:"select-box", id:"lens-category"}) %>
+      <%= f.collection_select(:lenz_id, Lenz.all, :id, :name, {}, {class:"select-box", id:"lenz-category"}) %>
     </div>
   </div>
   <%# 選択欄 %>

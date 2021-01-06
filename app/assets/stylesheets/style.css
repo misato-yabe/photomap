@@ -809,7 +809,7 @@ justify-content: center;
 .ps-contents{
 	width: 65%;
 	margin: 50px auto;
-  border: solid 1px #dedede;
+
 }
 
 
@@ -822,8 +822,8 @@ justify-content: center;
 
 .ps-edit {
 display: flex;
-justify-content: flex-end;
-margin: 10px auto;
+justify-content: center;
+margin: 50px auto;
 }
 
 
@@ -833,7 +833,7 @@ margin: 10px auto;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
-	margin: 5px 10px;
+	margin: 0px 30px;
   background: #269fa394;
 	border: solid 1px #2b6859;
 	align-items: center;
