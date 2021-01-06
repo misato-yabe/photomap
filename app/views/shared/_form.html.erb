@@ -1,0 +1,80 @@
+  <%= form_with model: photo,local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+  <%# 投稿写真 %>
+  <div class="photo-upload">
+    <div class="photo-field">
+      <div class="photo">
+      <h3>写真を投稿する</h3>
+        <%= f.file_field :images, name: "photo[images][]", id:"photo-image" %>
+        <div id="image-list"></div>
+      </div>
+    </div>
+  </div>
+  <%# 投稿写真 %>
+
+  <%# 投稿写真詳細 %>
+  <div class="photo-infomation">
+    <div class="title-field">
+      <div class= "title">
+      <h5>タイトル</h5>
+      </div>
+      <span class="indispensable">必須</span>
+      <%= f.text_area :title, class:"photo-title", id:"photo-title", placeholder:"タイトル（20文字まで)", maxlength:"20" %>
+    </div>
+    <div class="comment-field">
+      <div class="comment">
+      <h5>コメント</h5>
+      </div>
+      <%= f.text_area :comment, class:"photo-comment", id:"photo-comment", placeholder:"写真の説明（必須 800字まで）" ,rows:"5" ,maxlength:"800" %>
+    </div>
+  </div>
+  <%# 投稿写真詳細 %>
+
+  <%# 選択欄 %>
+  <div class="photo-category">
+    <div class="prefecture-field">
+      <div class="prefecture">
+      <h5>撮影場所</h5>
+      </div>
+      <span class="indispensable">必須</span>
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture-category"}) %>
+    </div>
+    <div class="situation-field">
+      <div class="situation">
+      <h5>撮影状況</h5>
+      </div>
+      <%= f.collection_select(:situation_id, Situation.all, :id, :name, {}, {class:"select-box", id:"situation-category"}) %>
+    </div>
+    <div class="weather-field">
+      <div class="weather">
+      <h5>天候</h5>
+      </div>
+      <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"select-box", id:"weather-category"}) %>
+    </div>
+    <div class="month-field">
+      <div class="month">
+      <h5>撮影月</h5>
+      </div>
+      <%= f.collection_select(:month_id, Month.all, :id, :name, {}, {class:"select-box", id:"month-category"}) %>
+    </div>
+    <div class="camera-field">
+      <div class="camera">
+      <h5>カメラ</h5>
+      </div>
+      <%= f.collection_select(:camera_id, Camera.all, :id, :name, {}, {class:"select-box", id:"camera-category"}) %>
+    </div>
+    <div class="lenz-field">
+      <div class="lenz">
+      <h5>レンズ</h5>
+      </div>
+      <%= f.collection_select(:lenz_id, Lenz.all, :id, :name, {}, {class:"select-box", id:"lenz-category"}) %>
+    </div>
+  </div>
+  <%# 選択欄 %>
+    <%# 下部ボタン %>
+    <div class="post-btn-field">
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# 下部ボタン %>
+  <% end %>

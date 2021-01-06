@@ -1,7 +1,8 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!,only:[:new,:edit]
   before_action :move_to_index,only:[:new,:edit]
-  before_action :photo_set,only:[:edit,:show]
+  before_action :photo_set,only:[:edit,:show,:edit,:update]
+  before_action :contributor_confirmation, only: [:edit, :update]
 
   def index
     @photos = Photo.all.order("created_at DESC")
@@ -37,6 +38,14 @@ class PhotosController < ApplicationController
   def edit
   end
 
+  def update
+    if @photo.update(photo_params)
+      redirect_to photo_path(@photo)
+    else
+      render :edit
+    end
+  end
+
   def show
   end
 
@@ -56,5 +65,9 @@ class PhotosController < ApplicationController
     unless user_signed_in?
       redirect_to action: :index
     end
+  end
+
+  def contributor_confirmation
+    redirect_to root_path unless current_user == @photo.user
   end
 end
