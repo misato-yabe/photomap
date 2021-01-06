@@ -1,70 +1,34 @@
-<%= render "shared/header" %>
-<%# 投稿写真一覧 %>
+<div class="top-header">
+  <%= link_to new_photo_path, class:"top-image" do %>
+    <%= image_tag "logo.svg" %>
+  <% end %>
+  <nav id="menubar">
+    <ul class="menubar-list">
+        <li><%= link_to 'Search', photos_search_photos_path, class: "serch" %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'My Page', user_path(current_user.id), class: "mypage" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+        <li><%= link_to '投稿する', new_photo_path , class: "post" %></li>
+      <% else %>
+        <li><%= link_to '新規登録',new_user_registration_path, class: "signin" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path , method: :get, class: "login" %></li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+
 
 <div class='main'>
   <p>Pick Up Photos</p>
     <ul class="photos-lists">
-    <% if @photos != nil %>
+    <% if @photos.present? %>
       <% @photos.each do |photo| %>
-      <li class='photo-content'>
-        <div class="photo-img-content">
-          <div class="slider">
-            <% photo.images.each do |image| %>
-              <%= link_to "#" do %>
-              <%= image_tag image, class: 'photo-img'%>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
-      </li>
+      <%= render partial: "shared/photo", locals: { photo: photo } %>
       <% end %>
     <% else %>
-      <li class='photo-content'>
-      <%= image_tag "sample1.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample2.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample3.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample4.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample5.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample6.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
+    <br>
+    写真が投稿されていません
+    <br>
   <% end %>
   </ul>
 </div>

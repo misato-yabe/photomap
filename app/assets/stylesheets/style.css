@@ -53,7 +53,7 @@ header{
   height: 70%;
   width: 100%;
   background: linear-gradient(to top, rgba(20, 20, 20, 0.5) 0%, rgba(35, 36, 36, 0.5) 100%),
-  url(santa1.jpg);
+  url(back.jpg);
 	background-size: cover;
 	position: relative;
 	display: flex;
@@ -505,7 +505,8 @@ text-align: center;
 }
 
 .form-title-sns:hover {
-	background: #269fa3;
+	background: #2dbbc0;
+	transition: .4s;
 }
 
 .user-form p{
@@ -786,8 +787,8 @@ justify-content: center;
 .form--btn {
 	width: 230px;
 	height: 30px;
-  background: #9c701e;
-	border: 1px solid #9c701e;
+  background: #269fa394;
+	border: 1px solid #2b6859;
 	border-radius: 4px;
   color: #ccc;
   font-size: 14px;
@@ -796,3 +797,77 @@ justify-content: center;
 	text-align: center;
 	text-decoration: none;
 }
+
+.form--btn:hover {
+  background: #2dbbc0;
+	color: rgb(199, 199, 199);
+	transition: .4s;
+}
+
+/* --PHOTO-SHOW-------- */
+
+.ps-contents{
+	width: 65%;
+	margin: 50px auto;
+
+}
+
+
+.variable-width img {
+	height: 80vw;
+	max-height: 500px;
+  min-height: 350px;
+	padding: 0 14px;
+}
+
+.ps-edit {
+display: flex;
+justify-content: center;
+margin: 50px auto;
+}
+
+
+.ps-edit li {
+	width: 100px;
+	list-style: none;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	margin: 0px 30px;
+  background: #269fa394;
+	border: solid 1px #2b6859;
+	align-items: center;
+	}
+
+	.ps-edit li:hover {
+		background: #2dbbc0;
+		color: rgb(199, 199, 199);
+		transition: .4s;
+	}
+
+.ps-info{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.ps-info-frame{
+	display: flex;
+}
+
+.ps-info-detail{
+	width: 20%;
+	padding: 15px;
+  border: solid 1px #dedede;
+  font-size: 16px;
+	text-align: center;
+}
+
+.ps-info-value{
+  width: 80%;
+  padding: 15px;
+  border: solid 1px #dedede;
+  font-size: 16px;
+}
+
+/* --PHOTO-SHOW-------- */

@@ -5,7 +5,7 @@ class Photo < ApplicationRecord
   belongs_to_active_hash :weather
   belongs_to_active_hash :month
   belongs_to_active_hash :camera
-  belongs_to_active_hash :len
+  belongs_to_active_hash :lenz
   belongs_to :user
   # belongs_to :area
   has_many_attached :images

@@ -1,0 +1,61 @@
+<%= render "shared/header" %>
+
+<div class="ps-contents">
+  <div class="ps-photos">
+    <div class="ps-photo">
+      <div class="variable-width">
+        <% @photo.images.each do |image| %>
+        <%= image_tag image %>
+        <% end %>
+      </div>
+    </div>
+    <div class="ps-edit">
+      <li>
+        <%= link_to '編集', edit_photo_path(@photo), method: :get %>
+      </li>
+      <li>
+        <%= link_to '削除', photo_path(@photo), method: :delete %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="ps-info">
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">タイトル</div>
+        <div class="ps-info-value"><%= @photo.title %></div>
+      </div>
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">説明文</div>
+        <div class="ps-info-value"><%= @photo.comment %></div>
+      </div>
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">撮影場所</div>
+        <div class="ps-info-value"><%= @photo.prefecture.name %></div>
+      </div>
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">撮影状況</div>
+        <div class="ps-info-value"><%= @photo.situation.name %></div>
+      </div>
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">天気</div>
+        <div class="ps-info-value"><%= @photo.weather.name%></div>
+      </div>
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">撮影月</div>
+        <div class="ps-info-value"><%= @photo.month.name %></div>
+      </div>
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">カメラメーカー</div>
+        <div class="ps-info-value"><%= @photo.camera.name %></div>
+      </div>
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">レンズの種類</div>
+        <div class="ps-info-value"><%= @photo.lenz.name %></div>
+      </div>
+      <br>
+      <br>
+      <br>
+  </div>
+</div>
+
+
