@@ -523,6 +523,7 @@ text-align: center;
 
 .user-form{
 	padding-top: 5px;
+	padding-bottom: 10%;
 	margin: 0 24%;
 }
 
@@ -571,7 +572,7 @@ text-align: center;
 	pointer-events: none;
 }
 .form-container.cp_sl01 select {
-	padding: 8px 38px 8px 8px;
+	padding: 3px 38px 8px 8px;
 	color: #faf8f8;
 }
 
@@ -584,6 +585,8 @@ text-align: center;
 .btn-submit{
 	margin: 100px 0px;
 	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 .btn-flat-border {
@@ -871,3 +874,38 @@ margin: 50px auto;
 }
 
 /* --PHOTO-SHOW-------- */
+
+/* --PHOTO-NEW-------- */
+
+.photo-upload{
+	width: 100%;
+	height: 400px;
+	background-color: rgb(66, 65, 65);
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-around;
+	border: solid 1px #dedede;
+
+}
+
+.photo-field{
+	width: 50%;
+}
+
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+/* --PHOTO-NEW-------- */
