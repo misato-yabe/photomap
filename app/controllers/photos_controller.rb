@@ -1,8 +1,8 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_user!,only:[:new,:edit]
+  before_action :authenticate_user!,except:[:index,:show]
   before_action :move_to_index,only:[:new,:edit]
-  before_action :photo_set,only:[:edit,:show,:edit,:update]
-  before_action :contributor_confirmation, only: [:edit, :update]
+  before_action :photo_set,only:[:edit,:show,:update,:destroy]
+  before_action :contributor_confirmation, only: [:edit,:update,:destroy]
 
   def index
     @photos = Photo.all.order("created_at DESC")
@@ -48,6 +48,16 @@ class PhotosController < ApplicationController
 
   def show
   end
+
+  def destroy
+    if @photo.destroy
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to photo_path(@photo)
+    end
+  end
+
+
 
   private
 

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root 'photos#index'
 
-  resources :photos, only: [:index,:new,:create,:show,:edit,:update] do
+  resources :photos do
     collection do
       get 'photos/search'
     end
