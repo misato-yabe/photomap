@@ -10,7 +10,7 @@
         <% if @user.image.attached? %>
         <%= image_tag @user.image,class:"circle-image" %>
         <% else %>
-        <%= image_tag("sample4.jpg",class:"circle-image")%>
+        <%= image_tag("default.jpg",class:"circle-image")%>
         <% end %>
       </div>
       <div class="profile">
@@ -29,9 +29,7 @@
           <% end %>
         </div>
         <div class="number-info">
-          <% if @user != nil %>
             <div class = "number-post">投稿件数 <%= current_user.photos.count %> 件 </div>
-          <% end %>
 
           <div class = "number-follower"><%= "フォロー数 #{@user.follower.count} 人" %></div>
           <div class = "number-follow"><%= "フォロワー数 #{@user.followed.count} 人" %></div>
@@ -44,7 +42,7 @@
             <% end %>
           <% end %>
         </div>
-        <% if @user.concept != nil %>
+        <% if @user.concept.present? %>
         <div class = "user-concept">
           <div class ="concept">
           <%= @user.concept %>
@@ -57,7 +55,7 @@
 
   <div class = "photo-contents">
     <ul class="photos-lists">
-    <% if @photos != nil %>
+    <% if @photos.present? %>
         <% @photos.each do |photo| %>
         <li class='photo-content'>
           <div class="photo-img-content">
@@ -75,49 +73,10 @@
           </div>
         </li>
         <% end %>
-      <% else %>
-      <li class='photo-content'>
-        <%= image_tag "sample1.jpg", class: "photo-img" %>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
-      </li>
-      <li class='photo-content'>
-        <%= image_tag "sample2.jpg", class: "photo-img" %>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
-      </li>
-      <li class='photo-content'>
-        <%= image_tag "sample3.jpg", class: "photo-img" %>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
-      </li>
-      <li class='photo-content'>
-        <%= image_tag "sample4.jpg", class: "photo-img" %>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
-      </li>
-      <li class='photo-content'>
-        <%= image_tag "sample5.jpg", class: "photo-img" %>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
-      </li>
-      <li class='photo-content'>
-        <%= image_tag "sample6.jpg", class: "photo-img" %>
-        <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
-          <span class='star-count'>0</span>
-        </div>
-      </li>
+    <% else %>
+      <br>
+      写真が投稿されていません
+      <br>
     <% end %>
     </ul>
   </div>

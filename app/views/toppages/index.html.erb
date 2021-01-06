@@ -7,11 +7,11 @@
         <li><%= link_to 'Search', photos_search_photos_path, class: "serch" %></li>
       <% if user_signed_in? %>
         <li><%= link_to 'My Page', user_path(current_user.id), class: "mypage" %></li>
-        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "logout"%></li>
-        <li><%= link_to 'Post', new_photo_path , class: "post" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+        <li><%= link_to '投稿する', new_photo_path , class: "post" %></li>
       <% else %>
-        <li><%= link_to 'Sign in',new_user_registration_path, class: "signin" %></li>
-        <li><%= link_to 'Log in', new_user_session_path , method: :get, class: "login" %></li>
+        <li><%= link_to '新規登録',new_user_registration_path, class: "signin" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path , method: :get, class: "login" %></li>
       <% end %>
     </ul>
   </nav>

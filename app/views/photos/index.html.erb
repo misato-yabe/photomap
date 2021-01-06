@@ -4,7 +4,7 @@
 <div class='main'>
   <p>Pick Up Photos</p>
     <ul class="photos-lists">
-    <% if @photos != nil %>
+    <% if @photos.present? %>
       <% @photos.each do |photo| %>
       <li class='photo-content'>
         <div class="photo-img-content">
@@ -23,48 +23,9 @@
       </li>
       <% end %>
     <% else %>
-      <li class='photo-content'>
-      <%= image_tag "sample1.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample2.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample3.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample4.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample5.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
-    <li class='photo-content'>
-      <%= image_tag "sample6.jpg", class: "photo-img" %>
-      <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %>
-        <span class='star-count'>0</span>
-      </div>
-    </li>
+    <br>
+    写真が投稿されていません
+    <br>
   <% end %>
   </ul>
 </div>

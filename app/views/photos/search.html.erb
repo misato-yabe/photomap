@@ -3,7 +3,6 @@
 <div class='main'>
   <%# 写真検索 %>
   <div class="map-form-search">
-
     <%# MAP検索 %>
     <div class= "map-search">
       <div id="map-container"></div>
@@ -11,8 +10,6 @@
     <%# MAP検索 %>
 
     <%# 詳細検索 %>
-
-
     <div class="form-search">
         <div class="form-container">詳細検索</div>
         <%= search_form_for @p, url: photos_search_photos_path do |f| %>
@@ -38,10 +35,8 @@
           <%= f.submit "検索" ,class:"btn-flat-border" %>
         </div>
         <% end %>
-      
     </div>
     <%# 詳細検索 %>
-
   </div>
   <%# 写真検索 %>
 

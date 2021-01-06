@@ -505,7 +505,8 @@ text-align: center;
 }
 
 .form-title-sns:hover {
-	background: #269fa3;
+	background: #2dbbc0;
+	transition: .4s;
 }
 
 .user-form p{
@@ -786,8 +787,8 @@ justify-content: center;
 .form--btn {
 	width: 230px;
 	height: 30px;
-  background: #9c701e;
-	border: 1px solid #9c701e;
+  background: #269fa394;
+	border: 1px solid #2b6859;
 	border-radius: 4px;
   color: #ccc;
   font-size: 14px;
@@ -795,4 +796,10 @@ justify-content: center;
 	margin-right: 40px;
 	text-align: center;
 	text-decoration: none;
+}
+
+.form--btn:hover {
+  background: #2dbbc0;
+	color: rgb(199, 199, 199);
+	transition: .4s;
 }
