@@ -11,7 +11,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	color: rgb(221, 219, 230);	/*全体の文字色*/
-	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-family:"sans-serif", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";	/*フォント種類*/
 	font-size: 16px;	/*文字サイズ*/
 	line-height: 2;		/*行間*/
 	background-color: #1a1919;
@@ -473,17 +473,56 @@ border-left: 1px solid #fff;
 text-align: center;
 }
 
-.form-container{
-font-size: 16px;
+.form-title{
+font-size: 25px;
+margin-top: 30px;
 border-bottom: 1px solid rgb(119, 119, 119);
 border-radius: 2px;
+text-align: center;
 }
 
+.form-title2{
+	display: flex;
+	height: 50px;
+	justify-content:space-between;
+	text-align: center;
+}
+.form-title3 {
+	display: flex;
+	height: 50px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.form-title-sns{
+	height: 28px;
+	padding: 5px;
+	margin-right: 20px;
+	border:2px solid #2b6859;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.form-title-sns:hover {
+	background: #269fa3;
+}
+
+.user-form p{
+	font-size: 16px;
+	color: rgb(71, 155, 204);
+	}
+
+	.user-form li{
+	font-size: 16px;
+	text-decoration: none;
+	border:1px solid #113463;
+	padding: 3px;
+	}
+
 .user-form{
-	width: 0 auto;
 	padding-top: 5px;
 	margin: 0 24%;
-	text-align: center;
 }
 
 /* ↓プルダウン */
@@ -543,18 +582,21 @@ border-radius: 2px;
 
 .btn-submit{
 	margin: 100px 0px;
+	text-align: center;
 }
 
 .btn-flat-border {
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #c0c0c0;
+  color: #746c6c;
   border: solid 2px #2b6859;
   border-radius: 3px;
 	transition: .4s;
 	width: 30%;
 	min-width: 100px;
+	height: 40px;
+	font-size: 16px;
 }
 
 .btn-flat-border:hover {

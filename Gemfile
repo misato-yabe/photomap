@@ -78,3 +78,7 @@ gem 'font-awesome-rails'
 gem 'jcanvas-rails', '~> 0.1.0'
 
 gem 'rails-i18n'
+
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
