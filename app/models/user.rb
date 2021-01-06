@@ -62,7 +62,7 @@ class User < ApplicationRecord
       sns.user = user
       sns.save
     end
-    user
+    { user: user, sns: sns }
   end
 
   # ーー↑SNS認証機能の実装ーー
