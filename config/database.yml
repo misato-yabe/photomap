@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: photomap_production
-  username: photomap
-  password: <%= ENV['PHOTOMAP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
