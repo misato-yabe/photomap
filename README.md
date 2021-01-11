@@ -17,18 +17,19 @@
 
 # DEMO
 - ユーザー登録
+
 [![Image from Gyazo](https://i.gyazo.com/786da03ef7f071eae22570208ede9dd9.gif)](https://gyazo.com/786da03ef7f071eae22570208ede9dd9)
-https://i.gyazo.com/786da03ef7f071eae22570208ede9dd9.gif
-https://i.gyazo.com/786da03ef7f071eae22570208ede9dd9.mp4
+
 
 - 複数枚の写真投稿
+
 [![Image from Gyazo](https://i.gyazo.com/6898ef63688ef9d86df3902c4c5ef9b1.gif)](https://gyazo.com/6898ef63688ef9d86df3902c4c5ef9b1)
 
-https://i.gyazo.com/6898ef63688ef9d86df3902c4c5ef9b1.gif
 
 - 写真の検索
+
 [![Image from Gyazo](https://i.gyazo.com/25eda96c665d22ed4245288f98cca3bd.gif)](https://gyazo.com/25eda96c665d22ed4245288f98cca3bd)
-https://i.gyazo.com/25eda96c665d22ed4245288f98cca3bd.gif
+
 
 
 # アプリURL
@@ -38,38 +39,5 @@ https://photomap-32068.herokuapp.com/
 email：abc123@gmail.com
 password：abc123
 
-## 洗い出した要件
-- ユーザー管理機能
-    - アカウントの登録・更新
-    - アイコン画像の設定(マイページ・ヘッダーに表示)
-    - 自己紹介文の作成
-    - 投稿した写真の件数を表示
-    - フォローしている人数を表示 ※未実装
-    - フォローされている人数を表示 ※未実装
 
-- 写真投稿機能
-    - 複数枚の写真の投稿
-        - 撮影時の詳細な情報を加えて投稿（タイトル/コメント/撮影場所/撮影状況/天候/撮影月/カメラ機種/レンズ種類 ）
-        - 複数枚投稿した写真に関しては、スライド機能を実装
-    - 写真投稿をする際のプレビュー機能の実装
-    - 写真詳細ページの作成 ※未実装
-        - 写真編集・削除ページの作成
-
-- 動画投稿機能 ※未実装
-    - 動画の投稿
-
-- 写真検索機能（MAP上で） ※未実装
-    - 日本地図の各都道府県をクリックすると、各地で撮影された写真が表示される
-    - 投稿のない地域については、MAP上で表示を変える
-
-- 写真検索機能
-    - 検索欄で各項目を選択すると写真の一覧が表示される
-
-## 実装した機能
-
-- 複数枚の画像の投稿
-  [![Image from Gyazo](https://i.gyazo.com/8ab46f30c10251350e60a284c6432b3f.gif)](https://gyazo.com/8ab46f30c10251350e60a284c6432b3f)
-
-- マイページの編集
-  <img src="597e38aae2f6c0c1ea602477cbfd49a3 (2).gif">
 
