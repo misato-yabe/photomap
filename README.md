@@ -1,44 +1,46 @@
 # Photomap
 [![Image from Gyazo](https://i.gyazo.com/a977fb9ca96c48ca83f5854d856128f4.png)](https://gyazo.com/a977fb9ca96c48ca83f5854d856128f4)
 
-# Feartures
+# 概要
+  - 写真の投稿サイト
+  - 写真検索
+  - ユーザーの登録
+  - 他のユーザーとフォロー機能
+
+# 画面詳細
 
 ### 1. ホーム
 ![screencapture-localhost-3000-2021-01-13-00_33_12](https://user-images.githubusercontent.com/73719069/104337422-d2513900-5538-11eb-9754-014f69e9b687.png)
 
 ### 2. マイページ
-自身が投稿した写真一覧が表示される  
-フォロー機能を実装  
-マイページの編集ができる  
+- 自身が投稿した写真一覧が表示される  
+- フォロー機能を実装  
+- マイページの編集ができる  
 ![screencapture-localhost-3000-users-8-2021-01-13-00_42_34](https://user-images.githubusercontent.com/73719069/104337872-47bd0980-5539-11eb-9dfe-10e2a06ade6f.jpg)
 
 ### 3. 写真詳細  
-投稿した写真の詳細情報が表示される
-投稿者のページへ遷移できる
+- 投稿した写真の詳細情報が表示される  
+- 投稿者のページへ遷移できる  
 ![screencapture-localhost-3000-photos-8-2021-01-13-00_39_42](https://user-images.githubusercontent.com/73719069/104337244-9cac5000-5538-11eb-8134-3215c7127d52.jpg)
 
 ### 4.写真投稿・編集
-写真の複数投稿
-選択した写真の
-写真の複数投稿プレビューが表示される
+- 写真の複数投稿  
+- 選択した写真のプレビューが表示される  
 ![screencapture-localhost-3000-photos-8-edit-2021-01-13-00_40_50](https://user-images.githubusercontent.com/73719069/104337478-e137eb80-5538-11eb-86c3-7322360633b8.jpg)
 
 ### 5.写真検索<br>
 投稿した写真とマッチする検索結果が表示される
 ![screencapture-localhost-3000-photos-photos-search-2021-01-13-00_49_02](https://user-images.githubusercontent.com/73719069/104337796-34aa3980-5539-11eb-94a3-bed5ad7b8efa.jpg)
 
-### 6.新規登録
+### 6.新規登録  
+- APIを利用し、Facebook、Googleのアカウント情報を利用できる　　
 ![screencapture-localhost-3000-users-sign-up-2021-01-13-00_52_57](https://user-images.githubusercontent.com/73719069/104338538-f7927700-5539-11eb-9518-eb7a83401cf8.jpg)
 
 ### 7.ログイン
+- アドレスとパスワードのみの入力でログインできる　　
 ![screencapture-localhost-3000-users-sign-in-2021-01-13-00_53_10](https://user-images.githubusercontent.com/73719069/104338580-01b47580-553a-11eb-95a9-170a36eafd37.jpg)
 
-
-## 概要
-  - 写真の投稿サイト
-  - 写真検索
-  - ユーザーの登録
-  - 他のユーザーとフォロー機能
+***
 
 ## 目的
   #### 撮影・旅行が好きな方に向けて
@@ -74,8 +76,8 @@ https://photomap-32068.herokuapp.com/
 #### テスト用アカウント
 
 ユーザー①
-email：tanaka@gmail.com  
-password：tanaka1  
+email:tanaka@gmail.com  
+password:tanaka1  
 
 ***
 
@@ -84,3 +86,33 @@ email:yasuda@gmail.com
 password:yasuda1
 
 ***
+
+# 使用技術(開発環境)
+### バックエンド
+Ruby,Ruby on Rails  
+
+### フロントエンド
+JavaScript,JQuery,Html,Css,Scss  
+
+### データベース
+MySQL,SequelPro  
+
+### インフラ
+AWS(EC2,S3),Capistrano,Docker(開発環境)  
+
+### ソース管理
+GitHub,GitHubDesktop  
+
+### テスト
+RSpec  
+
+### エディタ
+VSCode  
+
+# 課題や今後実装したい機能
+- 投稿された写真に対しての「いいね」機能の追加  
+- インスタグラムやTwitterとのLink機能の追加
+- 投稿された写真のExif情報の反映 → *個人情報の取り扱いに要注意*
+- AWSのインフラを利用してみたが、仕組みを完全に理解できたとは言い切れない。  
+そのため何度も、繰り返し利用することで記憶に定着させる。
+
