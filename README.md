@@ -1,6 +1,11 @@
 # Photomap
 [![Image from Gyazo](https://i.gyazo.com/a977fb9ca96c48ca83f5854d856128f4.png)](https://gyazo.com/a977fb9ca96c48ca83f5854d856128f4)
 
+# Feartures
+
+1.ホーム
+
+
 ## 概要
   - 写真の投稿サイト
   - 写真検索
