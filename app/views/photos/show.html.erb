@@ -9,7 +9,8 @@
         <% end %>
       </div>
     </div>
-    <div class="ps-edit">
+    <% if user_signed_in? && current_user.id == @photo.user_id %>
+    <ul class="ps-edit">
       <li>
         <%= link_to '編集', edit_photo_path(@photo), method: :get %>
       </li>
@@ -17,9 +18,16 @@
         <%= link_to '削除', photo_path(@photo), method: :delete %>
       </li>
     </ul>
+    <% end %>
   </div>
 
   <div class="ps-info">
+      <div class="ps-info-frame">
+        <div class="ps-info-detail">撮影者</div>
+        <div class="ps-info-value">
+        <%= link_to "#{ @photo.user.nickname }", user_path(current_user.id) %>
+        </div>
+      </div>
       <div class="ps-info-frame">
         <div class="ps-info-detail">タイトル</div>
         <div class="ps-info-value"><%= @photo.title %></div>
