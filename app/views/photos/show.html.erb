@@ -25,7 +25,7 @@
       <div class="ps-info-frame">
         <div class="ps-info-detail">撮影者</div>
         <div class="ps-info-value">
-        <%= link_to "#{ @photo.user.nickname }", user_path(current_user.id) %>
+        <%= link_to "#{@photo.user.nickname}", user_path(@photo.user) %>
         </div>
       </div>
       <div class="ps-info-frame">

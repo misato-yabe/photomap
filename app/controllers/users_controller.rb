@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!,only:[:edit,:update]
+  before_action :authenticate_user!,only:[:edit,:update,:show]
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :user_params,only:[:edit,:update]
   before_action :user_set,only:[:show,:edit,:update]
