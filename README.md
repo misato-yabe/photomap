@@ -1,6 +1,5 @@
 # Photomap
-
-[![Image from Gyazo](https://i.gyazo.com/309ba9850d7ca462599c7845f9b7bcd1.jpg)](https://gyazo.com/309ba9850d7ca462599c7845f9b7bcd1)
+[![Image from Gyazo](https://i.gyazo.com/a977fb9ca96c48ca83f5854d856128f4.png)](https://gyazo.com/a977fb9ca96c48ca83f5854d856128f4)
 
 ## 概要
   - 写真の投稿サイト
