@@ -3,7 +3,35 @@
 
 # Feartures
 
-1.ホーム
+### 1. ホーム
+![screencapture-localhost-3000-2021-01-13-00_33_12](https://user-images.githubusercontent.com/73719069/104337422-d2513900-5538-11eb-9754-014f69e9b687.png)
+
+### 2. マイページ
+自身が投稿した写真一覧が表示される
+フォロー機能を実装
+マイページの編集ができる
+![screencapture-localhost-3000-users-8-2021-01-13-00_42_34](https://user-images.githubusercontent.com/73719069/104337872-47bd0980-5539-11eb-9dfe-10e2a06ade6f.jpg)
+
+### 3. 写真詳細  
+投稿した写真の詳細情報が表示される
+投稿者のページへ遷移できる
+![screencapture-localhost-3000-photos-8-2021-01-13-00_39_42](https://user-images.githubusercontent.com/73719069/104337244-9cac5000-5538-11eb-8134-3215c7127d52.jpg)
+
+### 4.写真投稿・編集
+写真の複数投稿
+選択した写真の
+写真の複数投稿プレビューが表示される
+![screencapture-localhost-3000-photos-8-edit-2021-01-13-00_40_50](https://user-images.githubusercontent.com/73719069/104337478-e137eb80-5538-11eb-86c3-7322360633b8.jpg)
+
+### 5.写真検索<br>
+投稿した写真とマッチする検索結果が表示される
+![screencapture-localhost-3000-photos-photos-search-2021-01-13-00_49_02](https://user-images.githubusercontent.com/73719069/104337796-34aa3980-5539-11eb-94a3-bed5ad7b8efa.jpg)
+
+### 6.新規登録
+![screencapture-localhost-3000-users-sign-up-2021-01-13-00_52_57](https://user-images.githubusercontent.com/73719069/104338538-f7927700-5539-11eb-9518-eb7a83401cf8.jpg)
+
+### 7.ログイン
+![screencapture-localhost-3000-users-sign-in-2021-01-13-00_53_10](https://user-images.githubusercontent.com/73719069/104338580-01b47580-553a-11eb-95a9-170a36eafd37.jpg)
 
 
 ## 概要
