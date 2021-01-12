@@ -24,6 +24,7 @@
 
 [![Image from Gyazo](https://i.gyazo.com/786da03ef7f071eae22570208ede9dd9.gif)](https://gyazo.com/786da03ef7f071eae22570208ede9dd9)
 
+
 - 複数枚の写真投稿
 
 [![Image from Gyazo](https://i.gyazo.com/6898ef63688ef9d86df3902c4c5ef9b1.gif)](https://gyazo.com/6898ef63688ef9d86df3902c4c5ef9b1)
@@ -39,6 +40,7 @@ https://photomap-32068.herokuapp.com/
 ※画像の拡張子は **jpg** または **png** 形式で投稿
 
 #### テスト用アカウント
+
 ユーザー①
 email：tanaka@gmail.com  
 password：tanaka1  
