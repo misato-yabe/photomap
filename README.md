@@ -29,15 +29,15 @@
 ![screencapture-localhost-3000-photos-8-edit-2021-01-13-00_40_50](https://user-images.githubusercontent.com/73719069/104337478-e137eb80-5538-11eb-86c3-7322360633b8.jpg)
 
 ### 5.写真検索<br>
-投稿した写真とマッチする検索結果が表示される
+- 投稿した写真とマッチする検索結果が表示される  
 ![screencapture-localhost-3000-photos-photos-search-2021-01-13-00_49_02](https://user-images.githubusercontent.com/73719069/104337796-34aa3980-5539-11eb-94a3-bed5ad7b8efa.jpg)
 
 ### 6.新規登録  
-- APIを利用し、Facebook、Googleのアカウント情報を利用できる　　
+- APIを利用し、Facebook、Googleのアカウント情報を利用できる  
 ![screencapture-localhost-3000-users-sign-up-2021-01-13-00_52_57](https://user-images.githubusercontent.com/73719069/104338538-f7927700-5539-11eb-9518-eb7a83401cf8.jpg)
 
 ### 7.ログイン
-- アドレスとパスワードのみの入力でログインできる　　
+- アドレスとパスワードのみの入力でログインできる  
 ![screencapture-localhost-3000-users-sign-in-2021-01-13-00_53_10](https://user-images.githubusercontent.com/73719069/104338580-01b47580-553a-11eb-95a9-170a36eafd37.jpg)
 
 ***
@@ -70,24 +70,24 @@
 
 
 # アプリURL
-https://photomap-32068.herokuapp.com/
+https://photomap-32068.herokuapp.com/  
 ※画像の拡張子は **jpg** または **png** 形式で投稿
 
 #### テスト用アカウント
 
-ユーザー①
+ユーザー①  
 email:tanaka@gmail.com  
 password:tanaka1  
 
 ***
 
-ユーザー②
+ユーザー②  
 email:yasuda@gmail.com  
 password:yasuda1
 
 ***
 
-# 使用技術(開発環境)
+## 使用技術(開発環境)
 ### バックエンド
 Ruby,Ruby on Rails  
 
