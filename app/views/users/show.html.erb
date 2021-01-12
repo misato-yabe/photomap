@@ -29,7 +29,7 @@
           <% end %>
         </div>
         <div class="number-info">
-            <div class = "number-post">投稿件数 <%= current_user.photos.count %> 件 </div>
+            <div class = "number-post">投稿件数 <%= @user.photos.count %> 件 </div>
 
           <div class = "number-follower"><%= "フォロー数 #{@user.follower.count} 人" %></div>
           <div class = "number-follow"><%= "フォロワー数 #{@user.followed.count} 人" %></div>
@@ -68,7 +68,6 @@
   </div>
 </div>
 
-<%# <%= render "shared/footer" %>
 
 <!--ページの上部に戻る「↑」ボタン-->
 <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>

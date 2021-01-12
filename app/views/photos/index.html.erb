@@ -1,4 +1,5 @@
 <div class="top-header">
+<%= image_tag "back.jpg" , class: 'top-header-sized'%>
   <%= link_to new_photo_path, class:"top-image" do %>
     <%= image_tag "logo.svg" %>
   <% end %>
@@ -34,7 +35,6 @@
 </div>
 <%# 投稿写真一覧 %>
 
-<%= render "shared/footer" %>
 
 <!--ページの上部に戻る「↑」ボタン-->
 <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
