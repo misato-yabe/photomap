@@ -7,9 +7,9 @@
 ![screencapture-localhost-3000-2021-01-13-00_33_12](https://user-images.githubusercontent.com/73719069/104337422-d2513900-5538-11eb-9754-014f69e9b687.png)
 
 ### 2. マイページ
-自身が投稿した写真一覧が表示される
-フォロー機能を実装
-マイページの編集ができる
+自身が投稿した写真一覧が表示される  
+フォロー機能を実装  
+マイページの編集ができる  
 ![screencapture-localhost-3000-users-8-2021-01-13-00_42_34](https://user-images.githubusercontent.com/73719069/104337872-47bd0980-5539-11eb-9dfe-10e2a06ade6f.jpg)
 
 ### 3. 写真詳細  
