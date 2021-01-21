@@ -98,7 +98,7 @@ JavaScript,JQuery,Html,Css,Scss
 MySQL,SequelPro  
 
 ### インフラ
-AWS(EC2,S3),Capistrano,Docker(開発環境)  
+Heroku,AWS(S3),Capistrano,Docker(開発環境)  
 
 ### ソース管理
 GitHub,GitHubDesktop  
