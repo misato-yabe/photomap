@@ -1,28 +1,30 @@
 <%= render "shared/header"%>
-<h2>ユーザー編集</h2>
-<%= form_with model: @user, url: user_path(@user.id), local: true do |f| %>
 
-<%= render "shared/error_messages", model: f.object %>
+<div class='main'>
+  <div class="user-form">
+    <div class="form-title">
+    マイページ編集
+    </div>
+    <%= form_with model: @user, url: user_path(@user.id), local: true do |f| %>
+    <%= render "shared/error_messages", model: f.object %>
 
-  <div class="field">
-    <%= f.label :nickname, "ニックネーム" %><br>
-    <%= f.text_area :nickname, autofocus: true, id:"nickname", placeholder:"(例) abc 10文字まで", maxlength:"10" %>
-  </div>
+    <div class="cp_iptxt">
+      <label>表示名</label>
+      <%= f.text_field :nickname, autofocus: true, class:"input-default", id:"nickname",placeholder:"ABC ※20字まで", maxlength:"20"  %>
+    </div>
 
-  <div class="field">
-    <%= f.label :image, "アイコン画像" %><br>
-    <%= f.file_field :image, id:"photo-image" , autocomplete: "アイコン画像"  %>
-    <div id="image-list"></div>
-  </div>
+    <div class="cp_iptxt">
+      <label>アイコン画像</label>
+      <%= f.file_field :image, id:"photo-image",placeholder:"アイコン画像" %>
+      <div id="image-list"></div>
+    </div>
 
-  <div class="field">
-    <%= f.label :concept, "自己紹介"  %><br />
-    <%= f.text_area :concept, autofocus: true, placeholder: "(例) はじめまして。"  %>
-  </div>
+    <div class="cp_iptxt">
+      <label>自己紹介</label>
+      <%= f.text_area :concept, class:"input-default", id:"photo-comment",rows:"1",placeholder:"(例) はじめまして。" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "更新する" %>
-  </div>
-<% end %>
-
-<%= link_to "Back", :back %>
+    <div class="btn-submit">
+      <%= f.submit "更新する" ,class:"btn-flat-border" %>
+    </div>
+    <% end %>
