@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   before_action :move_to_index,only:[:new,:edit]
   before_action :photo_set,only:[:edit,:show,:update,:destroy]
   before_action :contributor_confirmation, only: [:edit,:update,:destroy]
-  before_action :like_set
+  before_action :like_set,only: [:index,:search,:show]
 
   def index
     @photos = Photo.all.order("created_at DESC")

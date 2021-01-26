@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :follower_user, through: :followed, source: :follower # 自分をフォローしている人
   has_many :sns_credentials, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :liked_posts, through: :likes, source: :post
+  has_many :liked_photos, through: :likes, source: :photo
 
   with_options presence: true do
     with_options format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力してください' } do
