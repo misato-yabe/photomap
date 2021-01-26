@@ -7,7 +7,8 @@ class Photo < ApplicationRecord
   belongs_to_active_hash :camera
   belongs_to_active_hash :lenz
   belongs_to :user
-  # belongs_to :area
+  has_many :likes
+  has_many :liked_users, through: :likes, source: :user
   has_many_attached :images
 
   with_options presence: true do

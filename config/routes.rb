@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'photos#index'
 
   resources :photos do
+    resources :likes, only: [:create, :destroy]
     collection do
       get 'photos/search'
     end

@@ -9,6 +9,18 @@
         <% end %>
       </div>
     </div>
+    <div class='star-btn'>
+      <% if current_user.already_liked?(@photo) %>
+        <%= link_to photo_like_path(@photo), method: :delete do %>
+        <%= image_tag "star1.png", class: 'star-icon'%>
+        <% end %>
+      <% else %>
+        <%= link_to photo_likes_path(@photo), method: :post do %>
+        <%= image_tag "star0.png", class: 'star-icon'%>
+        <% end %>
+      <% end %>
+        <div class='star-count'><%= @photo.likes.count %></span>
+    </div>
     <% if user_signed_in? && current_user.id == @photo.user_id %>
     <ul class="ps-edit">
       <li>

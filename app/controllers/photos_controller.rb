@@ -3,6 +3,7 @@ class PhotosController < ApplicationController
   before_action :move_to_index,only:[:new,:edit]
   before_action :photo_set,only:[:edit,:show,:update,:destroy]
   before_action :contributor_confirmation, only: [:edit,:update,:destroy]
+  before_action :like_set,only: [:index,:search,:show]
 
   def index
     @photos = Photo.all.order("created_at DESC")
@@ -79,5 +80,9 @@ class PhotosController < ApplicationController
 
   def contributor_confirmation
     redirect_to root_path unless current_user == @photo.user
+  end
+
+  def like_set
+    @like = Like.new
   end
 end

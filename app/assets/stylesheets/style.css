@@ -682,20 +682,22 @@ justify-content: center;
 }
 
 .star-btn {
-	height: 20px;
-	margin: 5px;
+	width: 87%;
+	margin: 30px 0;
 	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .star-icon{
-	width: 20px;
+	width: 30px;
 	display: block;
 }
 .star-count {
-	width: 20px;
-	height: 20px;
-	margin: 5px,5px,10px,5px;
+	align-items: center;
+	padding-left: 10px;
 	display: block;
+	font-size: 23px;
 }
 
 /*マイページ
