@@ -68,4 +68,10 @@ class User < ApplicationRecord
   end
 
   # ーー↑SNS認証機能の実装ーー
+
+  # ーー↓いいね機能の実装ーー
+  def already_liked?(photo)
+    self.likes.exists?(photo_id: photo.id)
+  end
+  # ーー↑いいね機能の実装ーー
 end
