@@ -5,9 +5,9 @@
   <% end %>
   <nav id="menubar">
     <ul class="menubar-list">
-        <li><%= link_to 'Search', photos_search_photos_path, class: "serch" %></li>
+        <li><%= link_to '検索', photos_search_photos_path, class: "serch" %></li>
       <% if user_signed_in? %>
-        <li><%= link_to 'My Page', user_path(current_user.id), class: "mypage" %></li>
+        <li><%= link_to 'マイページ', user_path(current_user.id), class: "mypage" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
         <li><%= link_to '投稿する', new_photo_path , class: "post" %></li>
       <% else %>

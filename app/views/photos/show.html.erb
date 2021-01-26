@@ -19,17 +19,17 @@
         <%= image_tag "star0.png", class: 'star-icon'%>
         <% end %>
       <% end %>
-        <div class='star-count'><%= @photo.likes.count %></span>
+      <div class='star-count'><%= @photo.likes.count %></div>
     </div>
     <% if user_signed_in? && current_user.id == @photo.user_id %>
-    <ul class="ps-edit">
+    <div class="ps-edit">
       <li>
         <%= link_to '編集', edit_photo_path(@photo), method: :get %>
       </li>
       <li>
         <%= link_to '削除', photo_path(@photo), method: :delete %>
       </li>
-    </ul>
+    </div>
     <% end %>
   </div>
 

@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_user!,except:[:index,:show]
-  before_action :move_to_index,only:[:new,:edit]
+  before_action :authenticate_user!,except:[:index]
+  before_action :move_to_index,only:[:new,:edit,:show]
   before_action :photo_set,only:[:edit,:show,:update,:destroy]
   before_action :contributor_confirmation, only: [:edit,:update,:destroy]
   before_action :like_set,only: [:index,:search,:show]

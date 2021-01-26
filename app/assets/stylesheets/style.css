@@ -500,17 +500,20 @@ text-align: center;
 }
 
 .form-title-sns{
-	height: 28px;
+	height: 25px;
+	font-size: 17px;
 	padding: 5px;
 	margin-right: 20px;
-	border:2px solid #2b6859;
+  background:  #835b59;
+	border: 1px solid #D29290;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
+	border-radius: 3px;
 }
 
 .form-title-sns:hover {
-	background: #2dbbc0;
+	background: #D29290;
 	transition: .4s;
 }
 
@@ -598,8 +601,9 @@ text-align: center;
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
-  color: #746c6c;
-  border: solid 2px #2b6859;
+  color: #ffffff;
+	border: solid 2px #976867;
+	background-color:  #835b59;
   border-radius: 3px;
 	transition: .4s;
 	width: 30%;
@@ -609,7 +613,7 @@ text-align: center;
 }
 
 .btn-flat-border:hover {
-  background: #269fa3;
+  background: #D29290;
   color: rgb(199, 199, 199);
 }
 /* ↑送信ボタン */
@@ -690,7 +694,7 @@ justify-content: center;
 }
 
 .star-icon{
-	width: 30px;
+	width: 27px;
 	display: block;
 }
 .star-count {
@@ -799,8 +803,8 @@ justify-content: center;
 .form--btn {
 	width: 230px;
 	height: 30px;
-  background: #269fa394;
-	border: 1px solid #2b6859;
+  background:  #835b59;
+	border: 1px solid #D29290;
 	border-radius: 4px;
   color: #ccc;
   font-size: 14px;
@@ -811,7 +815,7 @@ justify-content: center;
 }
 
 .form--btn:hover {
-  background: #2dbbc0;
+  background: #D29290;
 	color: rgb(199, 199, 199);
 	transition: .4s;
 }
@@ -833,26 +837,27 @@ justify-content: center;
 }
 
 .ps-edit {
+width: 80%;
 display: flex;
-justify-content: center;
+justify-content: space-between;
 margin: 50px auto;
+text-decoration: none;
 }
 
-
 .ps-edit li {
-	width: 100px;
+	width: 350px;
 	list-style: none;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
-	margin: 0px 30px;
-  background: #269fa394;
-	border: solid 1px #2b6859;
+  background:  #835b59;
+	border: 1px solid #D29290;
 	align-items: center;
+	text-decoration: none;
 	}
 
 	.ps-edit li:hover {
-		background: #2dbbc0;
+		background: #D29290;
 		color: rgb(199, 199, 199);
 		transition: .4s;
 	}
