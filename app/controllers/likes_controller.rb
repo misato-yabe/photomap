@@ -14,7 +14,12 @@ class LikesController < ApplicationController
 end
 
 private
+def photo_params
+  params.require(:photo)
+  .permit(:title,:comment,:prefecture_id,:situation_id,:weather_id,:month_id,:camera_id,:lenz_id, images: [])
+  .merge(user_id: current_user.id)
+end
 
 def photo_set
-  @photo = Photo.find(params[:id])
+  @photo = Photo.find(params[:photo_id])
 end
